@@ -123,13 +123,48 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (To be filled by roadmapper) | | |
+| DSGN-01 | Phase 1 | Pending |
+| DSGN-02 | Phase 1 | Pending |
+| I18N-01 | Phase 1 | Pending |
+| NAV-01 | Phase 1 | Pending |
+| FOOT-01 | Phase 1 | Pending |
+| FOOT-02 | Phase 1 | Pending |
+| HERO-01 | Phase 2 | Pending |
+| HERO-04 | Phase 2 | Pending |
+| ABOUT-01 | Phase 2 | Pending |
+| ABOUT-02 | Phase 2 | Pending |
+| SERV-01 | Phase 2 | Pending |
+| SERV-02 | Phase 2 | Pending |
+| SERV-03 | Phase 2 | Pending |
+| TEST-01 | Phase 2 | Pending |
+| TEST-02 | Phase 2 | Pending |
+| PROC-01 | Phase 2 | Pending |
+| HERO-02 | Phase 3 | Pending |
+| HERO-03 | Phase 3 | Pending |
+| NAV-02 | Phase 3 | Pending |
+| NAV-03 | Phase 3 | Pending |
+| NAV-04 | Phase 3 | Pending |
+| PORT-01 | Phase 3 | Pending |
+| PORT-02 | Phase 3 | Pending |
+| PORT-03 | Phase 3 | Pending |
+| TEST-03 | Phase 3 | Pending |
+| DSGN-04 | Phase 3 | Pending |
+| PERF-02 | Phase 3 | Pending |
+| I18N-02 | Phase 3 | Pending |
+| I18N-03 | Phase 3 | Pending |
+| CONT-01 | Phase 4 | Pending |
+| CONT-02 | Phase 4 | Pending |
+| CONT-03 | Phase 4 | Pending |
+| DSGN-03 | Phase 4 | Pending |
+| PERF-01 | Phase 4 | Pending |
+| SEO-01 | Phase 4 | Pending |
+| SEO-02 | Phase 4 | Pending |
 
 **Coverage:**
-- v1 requirements: 30 total
-- Mapped to phases: 0
-- Unmapped: 30
+- v1 requirements: 36 total
+- Mapped to phases: 36
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-04-02*
-*Last updated: 2026-04-02 after initial definition*
+*Last updated: 2026-04-02 after roadmap creation*
