@@ -61,8 +61,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Design System
 
-- [ ] **DSGN-01**: Dark theme com preto/grafite profundo e acento ciano eletrico (#00FFFF) com gradientes sutis
-- [ ] **DSGN-02**: Fonte Inter ou Space Grotesk via Google Fonts (next/font)
+- [x] **DSGN-01**: Dark theme com preto/grafite profundo e acento ciano eletrico (#00FFFF) com gradientes sutis
+- [x] **DSGN-02**: Fonte Inter ou Space Grotesk via Google Fonts (next/font)
 - [ ] **DSGN-03**: 100% responsivo mobile-first
 - [ ] **DSGN-04**: Animacoes ao scroll (fade/slide) em todas as secoes via Framer Motion
 
@@ -123,8 +123,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DSGN-01 | Phase 1 | Pending |
-| DSGN-02 | Phase 1 | Pending |
+| DSGN-01 | Phase 1 | Complete |
+| DSGN-02 | Phase 1 | Complete |
 | I18N-01 | Phase 1 | Pending |
 | NAV-01 | Phase 1 | Pending |
 | FOOT-01 | Phase 1 | Pending |
