@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color palette — D-14, D-15, D-16, D-17 */
+  --color-background: #0A0A0A;
+  --color-surface:    #111111;
+  --color-accent:     #00FFFF;
+  --color-text-primary:   #FFFFFF;
+  --color-text-secondary: #E0E0E0;
+
+  /* Typography — D-01, D-02, D-03 */
+  --font-heading: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-body:    var(--font-inter), system-ui, sans-serif;
+}
+
+/* FOUC-safe base — backs up the inline script */
+html {
+  background-color: #0A0A0A;
+  color: #FFFFFF;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #0A0A0A;
+  color: #FFFFFF;
+}
