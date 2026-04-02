@@ -28,7 +28,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. The sticky header is visible and anchored at the top on every viewport size; the footer renders with logo, links, and brand phrase
   3. All display strings for all sections exist in both `lib/content/pt-BR.ts` and `lib/content/en.ts` — no section needs inline copy
   4. Social media placeholder links are present in the footer
-**Plans**: TBD
+**Plans**: 3 plans
+Plans:
+- [ ] 01-01-PLAN.md — Scaffold project and implement dark theme design system (DSGN-01, DSGN-02)
+- [ ] 01-02-PLAN.md — Create bilingual content model and LocaleContext (I18N-01)
+- [ ] 01-03-PLAN.md — Build sticky Header and Footer shells (NAV-01, FOOT-01, FOOT-02)
 **UI hint**: yes
 
 ### Phase 2: Static Sections
@@ -78,7 +82,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/TBD | Not started | - |
+| 1. Foundation | 0/3 | Ready to execute | - |
 | 2. Static Sections | 0/TBD | Not started | - |
 | 3. Interactive Islands | 0/TBD | Not started | - |
 | 4. Contact, SEO & Polish | 0/TBD | Not started | - |
