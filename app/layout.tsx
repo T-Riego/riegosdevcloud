@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Space_Grotesk, Inter } from 'next/font/google'
 import './globals.css'
+import { LocaleProvider } from '@/context/LocaleContext'
 
 // D-01, D-02, D-03: Two-font system via next/font — zero layout shift, self-hosted
 const spaceGrotesk = Space_Grotesk({
@@ -40,7 +41,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${spaceGrotesk.variable} ${inter.variable} font-body bg-background text-primary`}>
-        {children}
+        <LocaleProvider>
+          {children}
+        </LocaleProvider>
       </body>
     </html>
   )
