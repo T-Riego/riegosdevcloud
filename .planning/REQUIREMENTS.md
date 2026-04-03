@@ -16,7 +16,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Navigation
 
-- [ ] **NAV-01**: Header sticky que permanece fixo ao rolar a pagina com anchor links para cada secao
+- [x] **NAV-01**: Header sticky que permanece fixo ao rolar a pagina com anchor links para cada secao
 - [ ] **NAV-02**: Smooth scroll entre secoes ao clicar nos links de navegacao
 - [ ] **NAV-03**: Toggle bilingue PT-BR/EN no header que alterna todo o conteudo do site
 - [ ] **NAV-04**: Botao flutuante de WhatsApp sempre visivel com link direto para +55 31 98896-9661
@@ -56,8 +56,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Footer
 
-- [ ] **FOOT-01**: Footer com logo Riegos Dev, links rapidos para secoes, frase de marca e copyright
-- [ ] **FOOT-02**: Links placeholder para redes sociais
+- [x] **FOOT-01**: Footer com logo Riegos Dev, links rapidos para secoes, frase de marca e copyright
+- [x] **FOOT-02**: Links placeholder para redes sociais
 
 ### Design System
 
@@ -126,9 +126,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DSGN-01 | Phase 1 | Complete |
 | DSGN-02 | Phase 1 | Complete |
 | I18N-01 | Phase 1 | Complete |
-| NAV-01 | Phase 1 | Pending |
-| FOOT-01 | Phase 1 | Pending |
-| FOOT-02 | Phase 1 | Pending |
+| NAV-01 | Phase 1 | Complete |
+| FOOT-01 | Phase 1 | Complete |
+| FOOT-02 | Phase 1 | Complete |
 | HERO-01 | Phase 2 | Pending |
 | HERO-04 | Phase 2 | Pending |
 | ABOUT-01 | Phase 2 | Pending |

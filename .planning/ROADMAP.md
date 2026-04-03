@@ -32,7 +32,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 Plans:
 - [x] 01-01-PLAN.md — Scaffold project and implement dark theme design system (DSGN-01, DSGN-02)
 - [x] 01-02-PLAN.md — Create bilingual content model and LocaleContext (I18N-01)
-- [ ] 01-03-PLAN.md — Build sticky Header and Footer shells (NAV-01, FOOT-01, FOOT-02)
+- [x] 01-03-PLAN.md — Build sticky Header and Footer shells (NAV-01, FOOT-01, FOOT-02)
 **UI hint**: yes
 
 ### Phase 2: Static Sections
