@@ -12,7 +12,7 @@ The site is built in four phases driven by a strict dependency chain: the conten
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - Design system, content model, i18n context, header shell, and footer
+- [x] **Phase 1: Foundation** - Design system, content model, i18n context, header shell, and footer (completed 2026-04-03)
 - [ ] **Phase 2: Static Sections** - All content sections as Server Components with full bilingual text
 - [ ] **Phase 3: Interactive Islands** - Particles, typewriter, scroll animations, portfolio modal, carousel, and language toggle
 - [ ] **Phase 4: Contact, SEO & Polish** - Contact/CTA section, SEO metadata, mobile responsiveness audit, and Lighthouse validation
@@ -32,7 +32,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 Plans:
 - [x] 01-01-PLAN.md — Scaffold project and implement dark theme design system (DSGN-01, DSGN-02)
 - [x] 01-02-PLAN.md — Create bilingual content model and LocaleContext (I18N-01)
-- [ ] 01-03-PLAN.md — Build sticky Header and Footer shells (NAV-01, FOOT-01, FOOT-02)
+- [x] 01-03-PLAN.md — Build sticky Header and Footer shells (NAV-01, FOOT-01, FOOT-02)
 **UI hint**: yes
 
 ### Phase 2: Static Sections
@@ -82,7 +82,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 2/3 | In Progress|  |
+| 1. Foundation | 3/3 | Complete   | 2026-04-03 |
 | 2. Static Sections | 0/TBD | Not started | - |
 | 3. Interactive Islands | 0/TBD | Not started | - |
 | 4. Contact, SEO & Polish | 0/TBD | Not started | - |
