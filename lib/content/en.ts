@@ -26,6 +26,7 @@ export const en: SiteContent = {
       github: 'GitHub',
     },
     quickLinks: 'Quick links',
+    socialHeading: 'Social',
   },
   hero: {
     headline: 'Intelligence that scales your business',

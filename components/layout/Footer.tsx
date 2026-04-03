@@ -69,7 +69,7 @@ export function Footer() {
           {/* Social links column — FOOT-02 */}
           <div className="flex flex-col gap-3">
             <h3 className="font-heading font-medium text-sm text-primary uppercase tracking-wider">
-              Social
+              {content.footer.socialHeading}
             </h3>
             <div className="flex gap-3">
               {SOCIAL_LINKS.map((social) => (

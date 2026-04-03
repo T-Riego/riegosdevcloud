@@ -24,6 +24,7 @@ export const ptBR = {
       github: 'GitHub',
     },
     quickLinks: 'Links rápidos',
+    socialHeading: 'Social',
   },
   hero: {
     headline: 'Inteligência que escala o seu negócio',
