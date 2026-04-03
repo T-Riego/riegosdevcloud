@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 01-foundation-01-PLAN.md
-last_updated: "2026-04-02T22:58:27.833Z"
+stopped_at: Completed 01-foundation-02-PLAN.md
+last_updated: "2026-04-03T09:17:00.197Z"
 last_activity: 2026-04-02 — Roadmap created; 36 v1 requirements mapped across 4 phases
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 3
-  completed_plans: 1
+  completed_plans: 2
   percent: 0
 ---
 
@@ -53,6 +53,7 @@ Progress: [░░░░░░░░░░] 0%
 
 *Updated after each plan completion*
 | Phase 01-foundation P01 | 5 | 1 tasks | 10 files |
+| Phase 01-foundation P02 | 7 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -68,6 +69,8 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: Tailwind v4 CSS-native @theme block for design tokens — no tailwind.config.ts, tokens in globals.css
 - [Phase 01-foundation]: Space Grotesk heading + Inter body via next/font self-hosting for zero layout shift
 - [Phase 01-foundation]: FOUC prevention via dangerouslySetInnerHTML inline script sets backgroundColor=#0A0A0A before hydration
+- [Phase 01-foundation]: DeepMutable<typeof ptBR> for SiteContent — widens as-const literals to string/number base types so en.ts can satisfy same shape with translated strings
+- [Phase 01-foundation]: LocaleContext defaults to PT-BR in useState; reads localStorage in useEffect to avoid SSR hydration mismatch
 
 ### Pending Todos
 
@@ -81,6 +84,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-02T22:58:27.829Z
-Stopped at: Completed 01-foundation-01-PLAN.md
+Last session: 2026-04-03T09:17:00.193Z
+Stopped at: Completed 01-foundation-02-PLAN.md
 Resume file: None

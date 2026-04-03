@@ -75,7 +75,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### i18n
 
-- [ ] **I18N-01**: Todo conteudo textual externalizado em arquivos de traducao PT-BR e EN
+- [x] **I18N-01**: Todo conteudo textual externalizado em arquivos de traducao PT-BR e EN
 - [ ] **I18N-02**: Toggle no header alterna idioma instantaneamente sem recarregar pagina
 - [ ] **I18N-03**: Preferencia de idioma persistida em localStorage
 
@@ -125,7 +125,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 |-------------|-------|--------|
 | DSGN-01 | Phase 1 | Complete |
 | DSGN-02 | Phase 1 | Complete |
-| I18N-01 | Phase 1 | Pending |
+| I18N-01 | Phase 1 | Complete |
 | NAV-01 | Phase 1 | Pending |
 | FOOT-01 | Phase 1 | Pending |
 | FOOT-02 | Phase 1 | Pending |
