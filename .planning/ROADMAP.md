@@ -13,9 +13,9 @@ The site is built in four phases driven by a strict dependency chain: the conten
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - Design system, content model, i18n context, header shell, and footer (completed 2026-04-03)
-- [ ] **Phase 2: Static Sections** - All content sections as Server Components with full bilingual text
-- [ ] **Phase 3: Interactive Islands** - Particles, typewriter, scroll animations, portfolio modal, carousel, and language toggle
-- [ ] **Phase 4: Contact, SEO & Polish** - Contact/CTA section, SEO metadata, mobile responsiveness audit, and Lighthouse validation
+- [x] **Phase 2: Static Sections** - All content sections as Client Components with full bilingual text (completed 2026-04-05)
+- [x] **Phase 3: Interactive Islands** - Particles, typewriter, scroll animations, portfolio modal, WhatsApp FAB, smooth scroll (completed 2026-04-05)
+- [x] **Phase 4: Contact, SEO & Polish** - Contact form, SEO metadata, sitemap, OG tags (completed 2026-04-05)
 
 ## Phase Details
 
@@ -83,6 +83,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete   | 2026-04-03 |
-| 2. Static Sections | 0/TBD | Not started | - |
-| 3. Interactive Islands | 0/TBD | Not started | - |
-| 4. Contact, SEO & Polish | 0/TBD | Not started | - |
+| 2. Static Sections | 1/1 | Complete | 2026-04-05 |
+| 3. Interactive Islands | 1/1 | Complete | 2026-04-05 |
+| 4. Contact, SEO & Polish | 1/1 | Complete | 2026-04-05 |

@@ -3,7 +3,6 @@ import { Space_Grotesk, Inter } from 'next/font/google'
 import './globals.css'
 import { LocaleProvider } from '@/context/LocaleContext'
 
-// D-01, D-02, D-03: Two-font system via next/font — zero layout shift, self-hosted
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   weight: ['400', '500', '700'],
@@ -19,8 +18,36 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Riegos Dev',
-  description: 'Engenharia de IA e automação inteligente',
+  title: 'Riegos Dev — Automação com IA & Desenvolvimento Full Stack',
+  description: 'Automação inteligente, agentes para WhatsApp e desenvolvimento full stack para empresas que querem crescer. Engenharia de IA por Tiago, fundador da Riegos Dev.',
+  keywords: ['automação com IA', 'agentes WhatsApp', 'desenvolvimento full stack', 'n8n', 'engenharia de IA', 'Riegos Dev'],
+  authors: [{ name: 'Tiago — Riegos Dev' }],
+  creator: 'Riegos Dev',
+  metadataBase: new URL('https://riegosdev.com'),
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    alternateLocale: 'en_US',
+    siteName: 'Riegos Dev',
+    title: 'Riegos Dev — Automação com IA & Desenvolvimento Full Stack',
+    description: 'Automação inteligente, agentes para WhatsApp e desenvolvimento full stack para empresas que querem crescer.',
+    url: 'https://riegosdev.com',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Riegos Dev — Automação com IA & Desenvolvimento Full Stack',
+    description: 'Automação inteligente, agentes para WhatsApp e desenvolvimento full stack para empresas que querem crescer.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    languages: {
+      'pt-BR': 'https://riegosdev.com',
+      'en': 'https://riegosdev.com',
+    },
+  },
 }
 
 export default function RootLayout({
@@ -29,11 +56,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    // suppressHydrationWarning: prevents React warning from FOUC inline script — D-18
     <html lang="pt-BR" suppressHydrationWarning>
       <head>
-        {/* D-18: Blocking inline script — runs synchronously before first paint.
-            Sets dark background before ANY React hydration. Prevents white flash. */}
         <script
           dangerouslySetInnerHTML={{
             __html: `document.documentElement.style.backgroundColor='#0A0A0A';`,
