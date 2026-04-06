@@ -4,8 +4,8 @@ milestone: v1.0
 milestone_name: milestone
 status: active
 stopped_at: Completed Phase 3 — Interactive Islands
-last_updated: "2026-04-05"
-last_activity: 2026-04-05
+last_updated: "2026-04-06"
+last_activity: 2026-04-06
 progress:
   total_phases: 4
   completed_phases: 4
@@ -77,6 +77,9 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: Social links use href='#' placeholders; real URLs + rel=noopener noreferrer deferred to Phase 4 (T-03-02)
 - [Phase 01-foundation]: Header scroll detection uses passive listener + window.scrollY > 20; body scroll lock useEffect cleans up on unmount (T-03-03)
 - [Phase 01-foundation]: Social links use href='#' placeholders; real URLs + rel=noopener noreferrer deferred to Phase 4 (T-03-02)
+- [quick-260406-bb6]: AnimateOnScroll staggerChildren passes grid className to container — motion.div item wrappers become CSS grid cells directly
+- [quick-260406-bb6]: ProcessLine inside stagger container uses own useInView (position:absolute doesn't consume grid slot)
+- [quick-260406-bb6]: Hero CTAs use motion.a directly instead of wrapping <a> in motion.div — cleaner DOM
 
 ### Pending Todos
 
@@ -90,6 +93,12 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-03T09:30:16.495Z
-Stopped at: Completed 01-foundation-03-PLAN.md
+Last session: 2026-04-06T00:00:00Z
+Stopped at: Completed quick-260406-bb6 (scroll animations with Framer Motion)
 Resume file: None
+
+## Quick Tasks Completed
+
+| ID | Name | Date | Commits |
+|----|------|------|---------|
+| 260406-bb6 | Implementar animacoes on-scroll com Framer Motion | 2026-04-06 | ce6361c, 1124b30 |
