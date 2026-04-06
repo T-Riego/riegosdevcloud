@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useLocale } from '@/context/LocaleContext'
 import { MessageCircle } from 'lucide-react'
+import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll'
 
 export function ContactSection() {
   const { content } = useLocale()
@@ -27,6 +28,7 @@ export function ContactSection() {
 
   return (
     <section id="contato" className="py-24 px-4 sm:px-6">
+      <AnimateOnScroll animation="fadeUp">
       <div className="max-w-3xl mx-auto text-center">
         <p className="font-body text-sm text-accent uppercase tracking-widest mb-3">
           {content.contact.sectionTitle}
@@ -105,6 +107,7 @@ export function ContactSection() {
           </a>
         </div>
       </div>
+      </AnimateOnScroll>
     </section>
   )
 }

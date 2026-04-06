@@ -8,7 +8,6 @@ import { PortfolioSection } from '@/components/sections/PortfolioSection'
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection'
 import { ProcessSection } from '@/components/sections/ProcessSection'
 import { ContactSection } from '@/components/sections/ContactSection'
-import { ScrollAnimations } from '@/components/ui/ScrollAnimations'
 import { SectionDivider } from '@/components/ui/SectionDivider'
 import { WhatsAppFab } from '@/components/ui/WhatsAppFab'
 import { SmoothScroll } from '@/components/ui/SmoothScroll'
@@ -20,19 +19,17 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <HeroSection />
-        <ScrollAnimations>
-          <AboutSection />
-          <SectionDivider />
-          <ServicesSection />
-          <SectionDivider />
-          <PortfolioSection />
-          <SectionDivider />
-          <TestimonialsSection />
-          <SectionDivider />
-          <ProcessSection />
-          <SectionDivider />
-          <ContactSection />
-        </ScrollAnimations>
+        <AboutSection />
+        <SectionDivider />
+        <ServicesSection />
+        <SectionDivider />
+        <PortfolioSection />
+        <SectionDivider />
+        <TestimonialsSection />
+        <SectionDivider />
+        <ProcessSection />
+        <SectionDivider />
+        <ContactSection />
       </main>
       <Footer />
       <WhatsAppFab />

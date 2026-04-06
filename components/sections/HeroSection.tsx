@@ -3,11 +3,31 @@
 import dynamic from 'next/dynamic'
 import { useLocale } from '@/context/LocaleContext'
 import { TypeAnimation } from 'react-type-animation'
+import { motion, type Variants } from 'motion/react'
 
 const ParticleBackground = dynamic(
   () => import('@/components/ui/ParticleBackground').then((m) => m.ParticleBackground),
   { ssr: false }
 )
+
+const ctaContainerVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.8,
+    },
+  },
+}
+
+const ctaItemVariants: Variants = {
+  hidden: { opacity: 0, y: 16 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+  },
+}
 
 export function HeroSection() {
   const { content, locale } = useLocale()
@@ -50,22 +70,29 @@ export function HeroSection() {
           {content.hero.subheadline}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 mt-10">
-          <a
+        <motion.div
+          className="flex flex-col sm:flex-row gap-4 mt-10"
+          initial="hidden"
+          animate="visible"
+          variants={ctaContainerVariants}
+        >
+          <motion.a
             href="#portfolio"
+            variants={ctaItemVariants}
             className="inline-flex items-center justify-center px-8 py-3.5 min-h-[44px] rounded-lg bg-accent text-background font-heading font-bold text-base hover:brightness-110 active:scale-[0.98] transition-all duration-200 ease-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent cursor-pointer"
           >
             {content.hero.ctaPrimary}
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href={`https://wa.me/${phone}?text=${waMsg}`}
             target="_blank"
             rel="noopener noreferrer"
+            variants={ctaItemVariants}
             className="inline-flex items-center justify-center px-8 py-3.5 min-h-[44px] rounded-lg border border-accent text-accent font-heading font-bold text-base hover:bg-accent/10 active:scale-[0.98] transition-all duration-200 ease-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent cursor-pointer"
           >
             {content.hero.ctaWhatsApp}
-          </a>
-        </div>
+          </motion.a>
+        </motion.div>
       </div>
     </section>
   )
