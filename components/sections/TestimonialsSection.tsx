@@ -1,6 +1,7 @@
 'use client'
 
 import { useLocale } from '@/context/LocaleContext'
+import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll'
 
 export function TestimonialsSection() {
   const { content } = useLocale()
@@ -8,14 +9,20 @@ export function TestimonialsSection() {
   return (
     <section id="depoimentos" className="py-24 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
-        <p className="font-body text-sm text-accent uppercase tracking-widest mb-3">
-          {content.testimonials.sectionTitle}
-        </p>
-        <h2 className="font-heading font-bold text-[clamp(1.75rem,4vw,2.5rem)] text-primary mb-14 leading-tight">
-          {content.testimonials.headline}
-        </h2>
+        <AnimateOnScroll animation="fadeUp">
+          <p className="font-body text-sm text-accent uppercase tracking-widest mb-3">
+            {content.testimonials.sectionTitle}
+          </p>
+          <h2 className="font-heading font-bold text-[clamp(1.75rem,4vw,2.5rem)] text-primary mb-14 leading-tight">
+            {content.testimonials.headline}
+          </h2>
+        </AnimateOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <AnimateOnScroll
+          animation="staggerChildren"
+          staggerDelay={0.15}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
           {content.testimonials.items.map((item) => {
             const initials = item.name
               .split(' ')
@@ -55,7 +62,7 @@ export function TestimonialsSection() {
               </div>
             )
           })}
-        </div>
+        </AnimateOnScroll>
       </div>
     </section>
   )

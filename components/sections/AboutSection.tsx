@@ -1,6 +1,7 @@
 'use client'
 
 import { useLocale } from '@/context/LocaleContext'
+import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll'
 
 export function AboutSection() {
   const { content } = useLocale()
@@ -8,14 +9,15 @@ export function AboutSection() {
   return (
     <section id="sobre" className="py-24 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
-        <p className="font-body text-sm text-accent uppercase tracking-widest mb-3">
-          {content.about.sectionTitle}
-        </p>
-        <h2 className="font-heading font-bold text-[clamp(1.75rem,4vw,2.5rem)] text-primary mb-14 leading-tight">
-          {content.about.headline}
-        </h2>
+        <AnimateOnScroll animation="fadeUp" delay={0.1}>
+          <p className="font-body text-sm text-accent uppercase tracking-widest mb-3">
+            {content.about.sectionTitle}
+          </p>
+          <h2 className="font-heading font-bold text-[clamp(1.75rem,4vw,2.5rem)] text-primary mb-14 leading-tight">
+            {content.about.headline}
+          </h2>
 
-        <div className="flex flex-col md:flex-row gap-12 lg:gap-16 items-center">
+          <div className="flex flex-col md:flex-row gap-12 lg:gap-16 items-center">
           {/* Photo placeholder */}
           <div className="w-48 h-48 md:w-64 md:h-64 shrink-0 rounded-2xl bg-surface border border-accent/20 flex items-center justify-center shadow-[0_0_40px_rgba(0,255,255,0.05)]">
             <span className="text-accent/30 font-heading text-5xl font-bold select-none">T</span>
@@ -41,7 +43,8 @@ export function AboutSection() {
               ))}
             </div>
           </div>
-        </div>
+          </div>
+        </AnimateOnScroll>
       </div>
     </section>
   )

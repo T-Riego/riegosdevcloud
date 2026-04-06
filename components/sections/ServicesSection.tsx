@@ -3,6 +3,7 @@
 import { useLocale } from '@/context/LocaleContext'
 import { Bot, MessageCircle, Users, Globe, Code, Video } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
+import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll'
 
 const SERVICE_ICONS: Record<string, LucideIcon> = {
   automation: Bot,
@@ -19,14 +20,20 @@ export function ServicesSection() {
   return (
     <section id="servicos" className="py-24 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
-        <p className="font-body text-sm text-accent uppercase tracking-widest mb-3">
-          {content.services.sectionTitle}
-        </p>
-        <h2 className="font-heading font-bold text-[clamp(1.75rem,4vw,2.5rem)] text-primary mb-14 leading-tight">
-          {content.services.headline}
-        </h2>
+        <AnimateOnScroll animation="fadeUp">
+          <p className="font-body text-sm text-accent uppercase tracking-widest mb-3">
+            {content.services.sectionTitle}
+          </p>
+          <h2 className="font-heading font-bold text-[clamp(1.75rem,4vw,2.5rem)] text-primary mb-14 leading-tight">
+            {content.services.headline}
+          </h2>
+        </AnimateOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <AnimateOnScroll
+          animation="staggerChildren"
+          staggerDelay={0.09}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
           {content.services.items.map((item) => {
             const Icon = SERVICE_ICONS[item.id] ?? Bot
             return (
@@ -46,7 +53,7 @@ export function ServicesSection() {
               </div>
             )
           })}
-        </div>
+        </AnimateOnScroll>
       </div>
     </section>
   )

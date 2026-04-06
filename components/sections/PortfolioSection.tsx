@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useLocale } from '@/context/LocaleContext'
 import { X, ExternalLink } from 'lucide-react'
 import { motion, AnimatePresence } from 'motion/react'
+import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll'
 
 export function PortfolioSection() {
   const { content } = useLocale()
@@ -13,14 +14,20 @@ export function PortfolioSection() {
   return (
     <section id="portfolio" className="py-24 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
-        <p className="font-body text-sm text-accent uppercase tracking-widest mb-3">
-          {content.portfolio.sectionTitle}
-        </p>
-        <h2 className="font-heading font-bold text-[clamp(1.75rem,4vw,2.5rem)] text-primary mb-14 leading-tight">
-          {content.portfolio.headline}
-        </h2>
+        <AnimateOnScroll animation="fadeUp">
+          <p className="font-body text-sm text-accent uppercase tracking-widest mb-3">
+            {content.portfolio.sectionTitle}
+          </p>
+          <h2 className="font-heading font-bold text-[clamp(1.75rem,4vw,2.5rem)] text-primary mb-14 leading-tight">
+            {content.portfolio.headline}
+          </h2>
+        </AnimateOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <AnimateOnScroll
+          animation="staggerChildren"
+          staggerDelay={0.12}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
           {content.portfolio.items.map((item) => {
             const isPlaceholder = item.tech.length === 0
             return (
@@ -62,7 +69,7 @@ export function PortfolioSection() {
               </button>
             )
           })}
-        </div>
+        </AnimateOnScroll>
       </div>
 
       {/* Modal */}

@@ -1,6 +1,8 @@
 'use client'
 
 import { useLocale } from '@/context/LocaleContext'
+import { AnimateOnScroll } from '@/components/ui/AnimateOnScroll'
+import { ProcessLine } from '@/components/ui/ProcessLine'
 
 export function ProcessSection() {
   const { content } = useLocale()
@@ -9,17 +11,23 @@ export function ProcessSection() {
   return (
     <section id="processo" className="py-24 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
-        <p className="font-body text-sm text-accent uppercase tracking-widest mb-3">
-          {content.process.sectionTitle}
-        </p>
-        <h2 className="font-heading font-bold text-[clamp(1.75rem,4vw,2.5rem)] text-primary mb-16 leading-tight">
-          {content.process.headline}
-        </h2>
+        <AnimateOnScroll animation="fadeUp">
+          <p className="font-body text-sm text-accent uppercase tracking-widest mb-3">
+            {content.process.sectionTitle}
+          </p>
+          <h2 className="font-heading font-bold text-[clamp(1.75rem,4vw,2.5rem)] text-primary mb-16 leading-tight">
+            {content.process.headline}
+          </h2>
+        </AnimateOnScroll>
 
         {/* Desktop: horizontal timeline */}
-        <div className="hidden md:grid md:grid-cols-4 relative">
-          {/* Connector line across all steps */}
-          <div className="absolute top-6 left-[12.5%] right-[12.5%] h-px bg-accent/20" />
+        <AnimateOnScroll
+          animation="staggerChildren"
+          staggerDelay={0.12}
+          className="hidden md:grid md:grid-cols-4 relative"
+        >
+          {/* Connector line across all steps — positioned absolutely, animates independently */}
+          <ProcessLine />
 
           {steps.map((step) => (
             <div key={step.id} className="flex flex-col items-center text-center px-4">
@@ -36,14 +44,18 @@ export function ProcessSection() {
               </p>
             </div>
           ))}
-        </div>
+        </AnimateOnScroll>
 
         {/* Mobile: vertical timeline */}
         <div className="md:hidden relative pl-8">
           {/* Vertical line */}
           <div className="absolute top-0 bottom-0 left-[23px] w-px bg-accent/20" />
 
-          <div className="flex flex-col gap-10">
+          <AnimateOnScroll
+            animation="staggerChildren"
+            staggerDelay={0.1}
+            className="flex flex-col gap-10"
+          >
             {steps.map((step) => (
               <div key={step.id} className="relative">
                 <div className="absolute -left-8 top-0 w-12 h-12 rounded-full border-2 border-accent bg-background flex items-center justify-center z-10 shadow-[0_0_16px_rgba(0,255,255,0.1)]">
@@ -61,7 +73,7 @@ export function ProcessSection() {
                 </div>
               </div>
             ))}
-          </div>
+          </AnimateOnScroll>
         </div>
       </div>
     </section>
