@@ -30,10 +30,10 @@ export const ptBR = {
     headline: 'Inteligência que escala o seu negócio',
     subheadline: 'Automação com IA, agentes para WhatsApp e desenvolvimento full stack para empresas que querem crescer.',
     typewriterItems: [
-      'Automação com IA',
+      'Automação Inteligente',
       'Agentes para WhatsApp',
       'Captação Inteligente de Clientes',
-      'Desenvolvimento Full Stack',
+      'Marketing Digital com IA',
     ],
     ctaPrimary: 'Ver Projetos',
     ctaWhatsApp: 'Falar com Especialista',
@@ -60,16 +60,16 @@ export const ptBR = {
   },
   services: {
     sectionTitle: 'Serviços',
-    headline: 'O que posso fazer pelo seu negócio',
+    headline: 'O que Fazemos pela sua empresa!',
     items: [
       {
         id: 'automation',
-        title: 'Automação com IA',
+        title: 'Automação Inteligente',
         description: 'Processos repetitivos eliminados com agentes inteligentes. Do disparo de e-mails ao processamento de pedidos, tudo automático.',
       },
       {
         id: 'whatsapp',
-        title: 'Agentes WhatsApp',
+        title: 'Atendimento 24/7, Nunca Perca um Cliente',
         description: 'Atendimento 24/7 com agentes treinados no seu negócio. Qualifica leads, responde dúvidas e agenda reuniões sem intervenção humana.',
       },
       {
@@ -84,8 +84,8 @@ export const ptBR = {
       },
       {
         id: 'apps',
-        title: 'Apps Full Stack',
-        description: 'Aplicações web completas com backend robusto, banco de dados escalável e integrações com APIs e serviços externos.',
+        title: 'Facebook Ads & Marketing Agressivo',
+        description: 'Campanhas de anúncios no Facebook e Instagram criadas e gerenciadas com IA — segmentação precisa, criativos otimizados e escala para maximizar seu retorno.',
       },
       {
         id: 'videos',
@@ -120,11 +120,11 @@ export const ptBR = {
       },
       {
         id: 'p3',
-        title: 'Novo Projeto em Breve',
-        description: 'Mais um projeto de automação com IA em desenvolvimento. Acompanhe as novidades.',
-        fullDescription: 'Projeto em desenvolvimento. Detalhes em breve.',
-        tech: [],
-        status: 'Em breve',
+        title: 'Prospecção Ativa & Aumento de Vendas',
+        description: 'Sistema automatizado que identifica clientes ideais, inicia abordagens personalizadas e move leads pelo funil até a conversão — aumentando o pipeline sem esforço manual.',
+        fullDescription: 'Solução de prospecção ativa integrada com Instagram, WhatsApp e LinkedIn. A IA identifica perfis de cliente ideal (ICP), dispara mensagens personalizadas, acompanha interações e nutre relacionamentos automaticamente até o fechamento. Combina análise de comportamento com automação de follow-up para maximizar taxas de resposta e conversão.',
+        tech: ['n8n', 'GPT-4', 'WhatsApp Business API', 'Meta Ads API', 'Supabase'],
+        status: 'Em desenvolvimento',
       },
     ],
   },

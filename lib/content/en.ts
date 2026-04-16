@@ -32,10 +32,10 @@ export const en: SiteContent = {
     headline: 'Intelligence that scales your business',
     subheadline: 'AI automation, WhatsApp agents and full stack development for companies that want to grow.',
     typewriterItems: [
-      'AI Automation',
+      'Intelligent Automation',
       'WhatsApp Agents',
       'Intelligent Lead Generation',
-      'Full Stack Development',
+      'Digital Marketing with AI',
     ],
     ctaPrimary: 'View Projects',
     ctaWhatsApp: 'Talk to a Specialist',
@@ -62,16 +62,16 @@ export const en: SiteContent = {
   },
   services: {
     sectionTitle: 'Services',
-    headline: 'What I can do for your business',
+    headline: 'What We Do for Your Business!',
     items: [
       {
         id: 'automation',
-        title: 'AI Automation',
+        title: 'Intelligent Automation',
         description: 'Repetitive processes eliminated with intelligent agents. From email campaigns to order processing — all automatic.',
       },
       {
         id: 'whatsapp',
-        title: 'WhatsApp Agents',
+        title: '24/7 Support, Never Lose a Customer',
         description: '24/7 customer service with agents trained on your business. Qualifies leads, answers questions, and schedules meetings without human intervention.',
       },
       {
@@ -86,8 +86,8 @@ export const en: SiteContent = {
       },
       {
         id: 'apps',
-        title: 'Full Stack Apps',
-        description: 'Complete web applications with robust backend, scalable database, and integrations with APIs and external services.',
+        title: 'Facebook Ads & Aggressive Marketing',
+        description: 'Facebook and Instagram ad campaigns created and managed with AI — precise targeting, optimized creatives, and scale to maximize your return.',
       },
       {
         id: 'videos',
@@ -122,11 +122,11 @@ export const en: SiteContent = {
       },
       {
         id: 'p3',
-        title: 'New Project Coming Soon',
-        description: 'Another AI automation project in development. Stay tuned for updates.',
-        fullDescription: 'Project under development. Details coming soon.',
-        tech: [],
-        status: 'Coming soon',
+        title: 'Active Prospecting & Sales Growth',
+        description: 'Automated system that identifies ideal customers, initiates personalized outreach, and moves leads through the funnel to conversion — growing your pipeline without manual effort.',
+        fullDescription: 'Active prospecting solution integrated with Instagram, WhatsApp, and LinkedIn. AI identifies ideal customer profiles (ICP), sends personalized messages, tracks interactions, and automatically nurtures relationships through to closing. Combines behavioral analysis with follow-up automation to maximize response and conversion rates.',
+        tech: ['n8n', 'GPT-4', 'WhatsApp Business API', 'Meta Ads API', 'Supabase'],
+        status: 'In development',
       },
     ],
   },
