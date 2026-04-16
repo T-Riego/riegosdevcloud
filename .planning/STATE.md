@@ -4,8 +4,8 @@ milestone: v1.0
 milestone_name: milestone
 status: active
 stopped_at: Completed Phase 3 — Interactive Islands
-last_updated: "2026-04-06"
-last_activity: 2026-04-06
+last_updated: "2026-04-16"
+last_activity: 2026-04-16
 progress:
   total_phases: 4
   completed_phases: 4
@@ -80,6 +80,9 @@ Recent decisions affecting current work:
 - [quick-260406-bb6]: AnimateOnScroll staggerChildren passes grid className to container — motion.div item wrappers become CSS grid cells directly
 - [quick-260406-bb6]: ProcessLine inside stagger container uses own useInView (position:absolute doesn't consume grid slot)
 - [quick-260406-bb6]: Hero CTAs use motion.a directly instead of wrapping <a> in motion.div — cleaner DOM
+- [quick-260416-iyl]: CSS-only infinite marquee via translateX(-50% to 0) on duplicated DOM — no Framer Motion for marquee, zero new deps
+- [quick-260416-iyl]: Inline maskImage style prop used instead of Tailwind v4 arbitrary bracket syntax for cross-browser mask reliability
+- [quick-260416-iyl]: aria-hidden="true" on duplicate half of marquee DOM to prevent screen readers from announcing testimonials twice
 
 ### Pending Todos
 
@@ -93,8 +96,8 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-06T00:00:00Z
-Stopped at: Completed quick-260406-bb6 (scroll animations with Framer Motion)
+Last session: 2026-04-16T16:48:00Z
+Stopped at: Completed quick-260416-iyl (testimonials section refactored to infinite marquee)
 Resume file: None
 
 ## Quick Tasks Completed
@@ -102,3 +105,4 @@ Resume file: None
 | ID | Name | Date | Commits |
 |----|------|------|---------|
 | 260406-bb6 | Implementar animacoes on-scroll com Framer Motion | 2026-04-06 | ce6361c, 1124b30 |
+| 260416-iyl | Refatorar secao de depoimentos para carrossel marquee | 2026-04-16 | 6c09945, 553dab9 |
