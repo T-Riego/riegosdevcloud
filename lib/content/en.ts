@@ -42,10 +42,23 @@ export const en: SiteContent = {
   },
   about: {
     sectionTitle: 'About',
-    headline: 'The person behind Riegos Dev',
-    bio: 'Tiago is an AI and automation engineer focused on practical solutions that drive results. Founder of Riegos Dev, he combines full stack development with language model integration, autonomous agents, and high-impact automations for small and medium businesses.',
-    toolsLabel: 'Tools mastered',
-    tools: ['n8n', 'Cursor', 'Supabase', 'GPT / Claude APIs', 'WhatsApp API'],
+    headline: 'The people behind Riegos Dev',
+    team: [
+      {
+        id: 'daniel',
+        name: 'Daniel Riêgo',
+        role: 'Solutions Architect & Process Automation',
+        description: 'Specialist in integrating systems and creating fluid digital ecosystems. Turns operational bottlenecks and process challenges into concrete results, focused on solving problems intelligently and maximizing business efficiency.',
+        initials: 'DR',
+      },
+      {
+        id: 'tiago',
+        name: 'Tiago Riêgo',
+        role: 'Automation Engineer & Operational Intelligence',
+        description: 'Specialist in building secure, scalable, results-driven automation flows. Expert in automating repetitive processes, from intelligent spreadsheet handling to deploying personalized customer service assistants.',
+        initials: 'TR',
+      },
+    ],
   },
   services: {
     sectionTitle: 'Services',

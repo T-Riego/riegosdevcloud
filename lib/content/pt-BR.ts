@@ -41,9 +41,22 @@ export const ptBR = {
   about: {
     sectionTitle: 'Sobre',
     headline: 'Quem está por trás da Riegos Dev',
-    bio: 'Tiago é engenheiro de IA e automação com foco em soluções práticas que geram resultado. Fundador da Riegos Dev, combina desenvolvimento full stack com integração de modelos de linguagem, agentes autônomos e automações de alto impacto para pequenas e médias empresas.',
-    toolsLabel: 'Ferramentas dominadas',
-    tools: ['n8n', 'Cursor', 'Supabase', 'GPT / Claude APIs', 'WhatsApp API'],
+    team: [
+      {
+        id: 'daniel',
+        name: 'Daniel Riêgo',
+        role: 'Arquiteto de Soluções & Automação de Processos',
+        description: 'Especialista em integrar sistemas e criar ecossistemas digitais fluidos. Transforma gargalos operacionais e desafios de processos em resultados concretos, focado em resolver problemas de forma inteligente e maximizar a eficiência empresarial.',
+        initials: 'DR',
+      },
+      {
+        id: 'tiago',
+        name: 'Tiago Riêgo',
+        role: 'Engenheiro de Automação & Inteligência Operacional',
+        description: 'Especialista na criação de fluxos de automação seguros, escaláveis e focados em resultados. Especializado na automação de processos repetitivos, desde manipulação inteligente de planilhas complexas até implementação de assistentes de atendimento personalizados.',
+        initials: 'TR',
+      },
+    ],
   },
   services: {
     sectionTitle: 'Serviços',
