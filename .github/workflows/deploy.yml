@@ -3,7 +3,7 @@ name: Deploy Automático na VPS
 # Define que o robô só vai rodar quando você atualizar a branch 'main'
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   deploy:
