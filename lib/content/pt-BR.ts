@@ -27,16 +27,16 @@ export const ptBR = {
     socialHeading: 'Social',
   },
   hero: {
-    headline: 'Inteligência que escala o seu negócio',
-    subheadline: 'Automação com IA, agentes para WhatsApp e desenvolvimento full stack para empresas que querem crescer.',
+    headline: 'Transformamos atendimento em máquina de captação de clientes',
+    subheadline: 'Não é só automação. É crescimento previsível: Atendimentos para Whatsapp, redução de trabalho manual, sem falhas. Para empresas que querem crescer e lucrar mais.',
     typewriterItems: [
-      'Automação Inteligente',
-      'Agentes para WhatsApp',
+      'Transforme planilhas em dados',
+      'Agendamentos, lembretes e follow ups automáticos e sem erros',
       'Captação Inteligente de Clientes',
-      'Marketing Digital com IA',
+      'Marketing digital personalizado',
     ],
     ctaPrimary: 'Ver Projetos',
-    ctaWhatsApp: 'Falar com Especialista',
+    ctaWhatsApp: 'Agendar demonstração gratuita',
   },
   about: {
     sectionTitle: 'Sobre',
@@ -84,13 +84,13 @@ export const ptBR = {
       },
       {
         id: 'apps',
-        title: 'Facebook Ads & Marketing Agressivo',
+        title: 'Facebook Ads & Marketing Criativo',
         description: 'Campanhas de anúncios no Facebook e Instagram criadas e gerenciadas com IA — segmentação precisa, criativos otimizados e escala para maximizar seu retorno.',
       },
       {
         id: 'videos',
         title: 'Vídeos de Marketing',
-        description: 'Conteúdo em vídeo produzido com IA — roteiro, locução e edição automatizados para campanhas e redes sociais.',
+        description: 'Conteúdo em vídeo personalizado para sua marca — roteiro, locução e edição automatizados para campanhas e redes sociais.',
       },
     ],
   },
@@ -157,33 +157,48 @@ export const ptBR = {
   },
   process: {
     sectionTitle: 'Processo',
-    headline: 'Como trabalhamos juntos',
+    headline: 'Como sua operação começa a gerar resultados em poucos dias',
+    subheadline: 'Sem complicação, sem retrabalho, sem depender de equipe interna',
     steps: [
       {
         id: 'step1',
         number: '01',
-        title: 'Diagnóstico',
-        description: 'Entendemos seus processos, gargalos e objetivos. Mapeamos onde a automação gera mais impacto no menor tempo.',
+        title: 'Diagnóstico do gargalo (24h)',
+        description: '',
       },
       {
         id: 'step2',
         number: '02',
-        title: 'Estratégia',
-        description: 'Desenhamos a solução técnica ideal para o seu caso. Definimos ferramentas, integrações e cronograma realista.',
+        title: 'Estruturação da solução (automação + fluxo)',
+        description: '',
       },
       {
         id: 'step3',
         number: '03',
-        title: 'Desenvolvimento',
-        description: 'Construímos e testamos cada componente com rigor. Você acompanha o progresso e valida cada etapa.',
+        title: 'Implementação rápida',
+        description: '',
       },
       {
         id: 'step4',
         number: '04',
-        title: 'Entrega & Suporte',
-        description: 'Implantamos, treinamos sua equipe e monitoramos o desempenho. Suporte contínuo para garantir resultados duradouros.',
+        title: 'Ativação e otimização contínua',
+        description: '',
       },
     ],
+    beforeAfter: {
+      beforeTitle: 'ANTES',
+      afterTitle: 'DEPOIS',
+      before: [
+        'Leads perdidos no WhatsApp',
+        'Atendimento lento',
+        'Equipe sobrecarregada'
+      ],
+      after: [
+        'Respostas automáticas 24h',
+        'Captação organizada',
+        'Fluxo rodando sozinho'
+      ]
+    }
   },
   contact: {
     sectionTitle: 'Contato',

@@ -23,9 +23,9 @@ export default function Home() {
         <SectionDivider />
         <PortfolioSection />
         <SectionDivider />
-        <TestimonialsSection />
-        <SectionDivider />
         <ProcessSection />
+        <SectionDivider />
+        <TestimonialsSection />
         <SectionDivider />
         <AboutSection />
         <SectionDivider />

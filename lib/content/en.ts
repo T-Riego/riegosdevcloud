@@ -159,33 +159,48 @@ export const en: SiteContent = {
   },
   process: {
     sectionTitle: 'Process',
-    headline: 'How we work together',
+    headline: 'How your operation starts generating results in a few days',
+    subheadline: 'No complication, no rework, no depending on internal teams',
     steps: [
       {
         id: 'step1',
         number: '01',
-        title: 'Diagnosis',
-        description: 'We understand your processes, bottlenecks, and goals. We map where automation generates the most impact in the least time.',
+        title: 'Bottleneck Diagnosis (24h)',
+        description: '',
       },
       {
         id: 'step2',
         number: '02',
-        title: 'Strategy',
-        description: 'We design the ideal technical solution for your case. We define tools, integrations, and a realistic timeline.',
+        title: 'Solution Structuring (automation + flow)',
+        description: '',
       },
       {
         id: 'step3',
         number: '03',
-        title: 'Development',
-        description: 'We build and rigorously test every component. You track progress and validate each step.',
+        title: 'Fast Implementation',
+        description: '',
       },
       {
         id: 'step4',
         number: '04',
-        title: 'Delivery & Support',
-        description: 'We deploy, train your team, and monitor performance. Ongoing support to ensure lasting results.',
+        title: 'Activation & Continuous Optimization',
+        description: '',
       },
     ],
+    beforeAfter: {
+      beforeTitle: 'BEFORE',
+      afterTitle: 'AFTER',
+      before: [
+        'Lost leads on WhatsApp',
+        'Slow customer service',
+        'Overloaded team'
+      ],
+      after: [
+        '24/7 automatic responses',
+        'Organized lead generation',
+        'Flow running by itself'
+      ]
+    }
   },
   contact: {
     sectionTitle: 'Contact',

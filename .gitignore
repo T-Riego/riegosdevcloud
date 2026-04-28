@@ -33,3 +33,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Arquivos locais não rastreados
+Remotion/
+instrucoes de como subir na vps.txt
+próximos passos.txt
+stackn8n portainer.txt
+.claude/
+.planning/
