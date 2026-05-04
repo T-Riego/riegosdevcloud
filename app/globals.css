@@ -62,24 +62,4 @@ body {
   }
 }
 
-/* Marquee infinite scroll — used by TestimonialsSection */
-@keyframes marquee {
-  from { transform: translateX(-50%); }
-  to   { transform: translateX(0); }
-}
 
-.animate-marquee {
-  animation: marquee var(--marquee-duration, 40s) linear infinite;
-  will-change: transform;
-}
-
-.animate-marquee:hover {
-  animation-play-state: paused;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .animate-marquee {
-    animation: none;
-    transform: translateX(-50%);
-  }
-}
