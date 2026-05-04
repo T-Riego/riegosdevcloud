@@ -29,7 +29,7 @@ export const en: SiteContent = {
     socialHeading: 'Social',
   },
   hero: {
-    headline: 'Intelligence that scales your business',
+    headline: 'More responses, more organization, more clients closing.',
     subheadline: 'AI automation, WhatsApp agents and full stack development for companies that want to grow.',
     typewriterItems: [
       'Intelligent Automation',

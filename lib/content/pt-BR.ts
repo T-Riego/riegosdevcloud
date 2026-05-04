@@ -27,7 +27,7 @@ export const ptBR = {
     socialHeading: 'Social',
   },
   hero: {
-    headline: 'Transformamos atendimento em máquina de captação de clientes',
+    headline: 'Mais respostas, mais organização, mais clientes fechando.',
     subheadline: 'Não é só automação. É crescimento previsível: Atendimentos para Whatsapp, redução de trabalho manual, sem falhas. Para empresas que querem crescer e lucrar mais.',
     typewriterItems: [
       'Transforme planilhas em dados',
