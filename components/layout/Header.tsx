@@ -60,9 +60,9 @@ export function Header() {
             href="https://wa.me/5531988969661?text=Ol%C3%A1%2C+vim+pelo+site+e+tenho+interesse+em+seus+servi%C3%A7os."
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-primary-container text-on-primary-container px-5 py-2 rounded-full font-sans text-sm font-bold active:scale-95 transition-transform accent-gradient"
+            className="hidden sm:block bg-primary-container text-on-primary-container px-5 py-2 rounded-full font-sans text-sm font-bold active:scale-95 transition-transform accent-gradient"
           >
-            {content.hero.ctaWhatsApp}
+            Falar com Especialista
           </a>
 
           {/* Mobile Menu Button */}

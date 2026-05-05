@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#d8dadc",
+                    "on-primary": "#ffffff",
+                    "on-background": "#191c1e",
+                    "tertiary-container": "#dfe6f3",
+                    "surface-container-high": "#e6e8ea",
+                    "background": "#f7f9fb",
+                    "surface-variant": "#e0e3e5",
+                    "primary": "#006a6a",
+                    "tertiary": "#585f6a",
+                    "surface-container-highest": "#e0e3e5",
+                    "outline-variant": "#b9cac9",
+                    "inverse-surface": "#2d3133",
+                    "inverse-primary": "#00dddd",
+                    "secondary": "#545f73",
+                    "on-surface-variant": "#3a4a49",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#151c25",
+                    "primary-fixed-dim": "#00dddd",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f2f4f6",
+                    "on-secondary-fixed": "#111c2d",
+                    "outline": "#6a7a7a",
+                    "primary-fixed": "#00fbfb",
+                    "primary-container": "#00ffff",
+                    "surface": "#f7f9fb",
+                    "tertiary-fixed-dim": "#c0c7d3",
+                    "on-primary-fixed": "#002020",
+                    "on-primary-fixed-variant": "#004f4f",
+                    "secondary-fixed-dim": "#bcc7de",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "tertiary-fixed": "#dce3f0",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#586377",
+                    "surface-bright": "#f7f9fb",
+                    "surface-tint": "#006a6a",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#d8e3fb",
+                    "on-surface": "#191c1e",
+                    "on-primary-container": "#007272",
+                    "secondary-container": "#d5e0f8",
+                    "surface-container": "#eceef0",
+                    "on-tertiary-container": "#606772",
+                    "on-tertiary-fixed-variant": "#404752"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "container-max": "1280px",
+                    "md": "24px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "xl": "80px",
+                    "lg": "48px",
+                    "sm": "12px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "h1": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "h2": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h3": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "h1": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["13px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "h2": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.7", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "h3": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f7f9fb;
+            color: #191c1e;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+        .soft-card-shadow {
+            box-shadow: 0px 10px 30px rgba(30, 41, 59, 0.05);
+        }
+        .accent-gradient {
+            background: linear-gradient(135deg, #00ffff 0%, #007272 100%);
+        }
+    </style>
+</head>
+<body class="font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 border-b border-slate-200/50 bg-white/80 backdrop-blur-xl shadow-sm">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tighter text-slate-900">RiegosDev</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-cyan-600 border-b-2 border-cyan-500 pb-1 font-sans antialiased text-sm tracking-tight" href="#">Serviços</a>
+<a class="text-slate-600 hover:text-slate-900 transition-colors font-sans antialiased text-sm tracking-tight" href="#">Portfólio</a>
+<a class="text-slate-600 hover:text-slate-900 transition-colors font-sans antialiased text-sm tracking-tight" href="#">Processo</a>
+<a class="text-slate-600 hover:text-slate-900 transition-colors font-sans antialiased text-sm tracking-tight" href="#">Sobre</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block text-slate-600 font-sans text-sm font-semibold active:scale-95 transition-transform">Login</button>
+<button class="bg-primary-container text-on-primary-container px-5 py-2 rounded-full font-sans text-sm font-bold active:scale-95 transition-transform accent-gradient">Agendar Demo</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="pt-32 pb-20 md:pt-48 md:pb-32 px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container rounded-full text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="text-label-sm">Especialistas em Automação IA</span>
+</div>
+<h1 class="font-h1 text-h1 text-on-background max-w-xl">
+                    Transformamos atendimento em <span class="text-primary">máquina de captação</span> de clientes
+                </h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-lg">
+                    Não é só automação. É crescimento previsível: Atendimentos para Whatsapp, redução de trabalho manual, sem falhas.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="px-8 py-4 accent-gradient text-white rounded-xl font-bold flex items-center justify-center gap-2 active:scale-95 transition-transform">
+                        Começar Agora
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="px-8 py-4 bg-white border border-outline-variant text-on-background rounded-xl font-semibold hover:bg-surface-container-low transition-colors active:scale-95 transition-transform">
+                        Ver Case Studies
+                    </button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -z-10 inset-0 bg-primary-fixed blur-3xl opacity-20 rounded-full"></div>
+<div class="relative rounded-[32px] overflow-hidden border border-white soft-card-shadow">
+<img alt="RiegosDev Dashboard" class="w-full h-auto object-cover aspect-video lg:aspect-square" data-alt="A futuristic and clean workspace with a minimalist design, featuring a high-end laptop on a white desk with soft, high-key natural lighting. The color palette is composed of light grays and whites with subtle cyan accents from a glowing interface on the screen. The scene conveys a sense of professional digital craftsmanship and approachable innovation, aligning with a modern technology agency aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM73OP1Gcm0jUfqvaIbHSTWuC0Ur7jV5zxROQMWsc0oVMzOmbZvDHbfoZCq9GTN4LQK250QKGR-GibdzfuHJyK-EGQnN17aY6z4NU5q1zPVPBju98jAqYDN63N8ojPqeGliNONEypUm9cnTyWbXJ78g2WDHRzZQE7m9flZdUseQjpAONM_gXvqO_V6bFy-Y1HOKVCkGrvtvXseycVTMM4Vz3fKYkBaf_j4sM433nsqDr81q__bNAHhUPtiHsNEDiDdAfW4TjM5sQ4"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-20 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16 space-y-4">
+<h2 class="font-h2 text-h2 text-on-background">O que Fazemos pela sua empresa!</h2>
+<p class="text-secondary max-w-2xl mx-auto">Soluções tecnológicas desenhadas para escalar seu negócio sem aumentar a complexidade operacional.</p>
+</div>
+<!-- Bento Grid Services -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:grid-cols-3">
+<!-- Service Card 1 -->
+<div class="md:col-span-2 bg-white p-8 rounded-3xl border border-outline-variant/30 soft-card-shadow flex flex-col justify-between group hover:border-primary-container transition-colors duration-300">
+<div class="space-y-4">
+<div class="w-12 h-12 bg-primary-container/20 rounded-2xl flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]" data-weight="fill">smart_toy</span>
+</div>
+<h3 class="font-h3 text-h3">Automação Inteligente</h3>
+<p class="text-secondary max-w-md">Elimine tarefas repetitivas e erros humanos através da orquestração de processos ponta a ponta com as melhores tecnologias do mercado.</p>
+</div>
+<div class="mt-8">
+<img alt="Process Automation" class="w-full h-48 object-cover rounded-2xl" data-alt="Abstract conceptual visualization of data flow and automation in a minimalist white environment. Translucent blue lines interconnect floating geometric nodes, representing intelligent process automation. The lighting is clean and bright, creating a sense of clarity and technical precision consistent with the brand's minimalist-modern digital craftsmanship identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVsSkdTvnjrYhz5aSmdoUa96xcAmzEj_OdpD5aR3nLe5IyoKmscRcqxuE-Ebps8hW4WmzHdb3_YhklLOYl0mggYLyJfgi1cbuwt-3UTt-D7z3xXyMgbyxa_xXZR2Rfx7FNxjRFsy9x8yvG9uSHlDhzRgEJrV1359Ec4BtNtUt8_XCbJerthk7IdeAOqEwidwQhnGmZz71DyC_X6G8Hdfzcqh6mRo8IPTkgUMftpSTWVA10icq0VyQ5qlvSY3dUzcL8rzFmH9coaAI"/>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-secondary-container/30 p-8 rounded-3xl border border-outline-variant/30 soft-card-shadow flex flex-col items-center text-center space-y-6">
+<div class="h-full w-full overflow-hidden rounded-3xl">
+<img alt="Atendimento 24/7 com IA" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uiKKMPVk7b7PfPPXbKxkSVu5qtjUUHoOuw6CbWyhG09gG-NteDfcVkdnoGIiYBm9t39uRpxgHlvso_hXKuY9GshS7NyRwy4_3uOxYuA3plu_p_ennR6bVu4sGc8G9tkfvmzr-9XiEw3-pJfkcrKUKH-m8pTT_I5VMf5nicPxjdXgjxQ1_N7vw-DNM7Pr_rVqijUkSuGv7nbtZS1WZ6C1Yvm8aFXhocOmcW4NxTPoUVXz3TFlHDP-ExRu1UXq6tzOpABOSiUHTZh"/>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-white p-8 rounded-3xl border border-outline-variant/30 soft-card-shadow flex flex-col justify-between">
+<div class="space-y-4">
+<div class="w-12 h-12 bg-secondary-fixed rounded-2xl flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[32px]">filter_alt</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-background">Captação de Clientes</h3>
+<p class="text-secondary">Estratégias de lead magnets e funis de nutrição automatizados que transformam visitantes curiosos em clientes pagantes.</p>
+</div>
+</div>
+<!-- Service Card 4 -->
+<div class="md:col-span-2 bg-slate-900 p-8 rounded-3xl flex flex-col md:flex-row items-center gap-8 text-white overflow-hidden relative">
+<div class="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 blur-[100px]"></div>
+<div class="space-y-4 z-10">
+<h3 class="font-h3 text-h3">Sites &amp; Landing Pages</h3>
+<p class="text-slate-400 max-w-sm">Páginas de alta performance focadas em conversão, com design moderno e otimização total para dispositivos móveis.</p>
+<button class="text-cyan-400 font-semibold flex items-center gap-2 group">
+                            Solicitar Orçamento
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="w-full h-full z-10">
+<img alt="Modern Landing Page" class="rounded-xl shadow-2xl transform lg:rotate-3 lg:translate-x-10" data-alt="Professional UI/UX design displayed on high-resolution screens in a dark, atmospheric studio. The screens show vibrant blue and cyan interface elements with clean typography and rounded corners. Soft ambient light from the monitors illuminates a sleek desk, emphasizing a premium digital product feel and technical expertise in modern web development." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE5yw7xMhEjoX7Ud6K1HkEDz71N09Os53FLnIpirC_AXpf6d63r4ZG6DbDZ6GWcOP_TjD3TcMvKPzQmCCNPJdQGuPDQV6QHGhidqOYsk8P99x83d3mAVg_1R9mQgQkvCvZOCm1rc7xcxZB-ShCtXb2FP0quygcPSUg22jaXNadcrZShpwBJE33d3A5XGm8_W7HwnvLlXwRixa97JxpYMH8VLwQV7aKV4Rq3EkB3PVlRzadAoytL5xLO9ZdfaIiKSGelus1QGdvbPs"/>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-video rounded-[32px] overflow-hidden mb-6 relative">
+<img alt="Desenvolvimento de Sites &amp; Landing Pages" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE5yw7xMhEjoX7Ud6K1HkEDz71N09Os53FLnIpirC_AXpf6d63r4ZG6DbDZ6GWcOP_TjD3TcMvKPzQmCCNPJdQGuPDQV6QHGhidqOYsk8P99x83d3mAVg_1R9mQgQkvCvZOCm1rc7xcxZB-ShCtXb2FP0quygcPSUg22jaXNadcrZShpwBJE33d3A5XGm8_W7HwnvLlXwRixa97JxpYMH8VLwQV7aKV4Rq3EkB3PVlRzadAoytL5xLO9ZdfaIiKSGelus1QGdvbPs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-h3 text-h3 mb-2">Sites &amp; Landing Pages</h4>
+<p class="text-secondary text-sm">Desenvolvimento de interfaces de alta conversão com foco em UX/UI premium e performance extrema.</p>
+</div>
+<span class="bg-tertiary-container text-on-tertiary-container px-4 py-1 rounded-full text-xs font-bold whitespace-nowrap">WEB DESIGN</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section class="py-20 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="font-h2 text-h2 text-on-background">Como sua operação começa a gerar resultados</h2>
+</div>
+<!-- Steps Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+<div class="p-6 bg-white rounded-2xl border border-outline-variant/30 soft-card-shadow">
+<span class="text-h3 font-bold text-primary/30 block mb-4">01</span>
+<h3 class="font-h3 text-[20px] mb-2">Diagnóstico</h3>
+<p class="text-secondary text-sm">Mapeamos cada gargalo do seu atendimento atual.</p>
+</div>
+<div class="p-6 bg-white rounded-2xl border border-outline-variant/30 soft-card-shadow">
+<span class="text-h3 font-bold text-primary/30 block mb-4">02</span>
+<h3 class="font-h3 text-[20px] mb-2">Desenho</h3>
+<p class="text-secondary text-sm">Criamos o fluxo lógico e os prompts de IA.</p>
+</div>
+<div class="p-6 bg-white rounded-2xl border border-outline-variant/30 soft-card-shadow">
+<span class="text-h3 font-bold text-primary/30 block mb-4">03</span>
+<h3 class="font-h3 text-[20px] mb-2">Implementação</h3>
+<p class="text-secondary text-sm">Colocamos a máquina para rodar em ambiente controlado.</p>
+</div>
+<div class="p-6 bg-white rounded-2xl border border-outline-variant/30 soft-card-shadow">
+<span class="text-h3 font-bold text-primary/30 block mb-4">04</span>
+<h3 class="font-h3 text-[20px] mb-2">Escala</h3>
+<p class="text-secondary text-sm">Monitoramento e ajustes para explosão do volume.</p>
+</div>
+</div>
+<!-- Comparison Block -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-white p-8 md:p-12 rounded-[40px] border border-outline-variant/20 soft-card-shadow">
+<div class="space-y-8">
+<h3 class="font-bold text-sm tracking-widest text-secondary uppercase">A REALIDADE DA SUA OPERAÇÃO</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-error mt-1">close</span>
+<span class="text-secondary">Leads perdidos por demora no retorno</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-error mt-1">close</span>
+<span class="text-secondary">Equipe sobrecarregada com dúvidas básicas</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-error mt-1">close</span>
+<span class="text-secondary">Custo fixo de atendimento sempre crescente</span>
+</li>
+</ul>
+</div>
+<div class="bg-secondary-container/20 p-8 rounded-3xl space-y-8 border border-primary/10">
+<h3 class="font-bold text-sm tracking-widest text-primary uppercase">COM RIEGOSDEV</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span class="text-on-surface font-medium">Resposta instantânea em 100% dos contatos</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span class="text-on-surface font-medium">Filtro de leads automático: foque só no que vende</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span class="text-on-surface font-medium">Atendimento escalável sem contratar novos funcionários</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section><section class="py-20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="space-y-4">
+<span class="text-primary font-bold uppercase tracking-widest text-xs">Portfólio</span>
+<h2 class="font-h2 text-h2">Projetos que entregaram resultado</h2>
+</div>
+<a class="text-secondary font-semibold flex items-center gap-2 hover:text-primary transition-colors" href="#">
+                    Ver todos os projetos
+                    <span class="material-symbols-outlined">open_in_new</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-3">
+<!-- Project 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-video rounded-[32px] overflow-hidden mb-6 relative">
+<img alt="WhatsApp Bot Case" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0uiKKMPVk7b7PfPPXbKxkSVu5qtjUUHoOuw6CbWyhG09gG-NteDfcVkdnoGIiYBm9t39uRpxgHlvso_hXKuY9GshS7NyRwy4_3uOxYuA3plu_p_ennR6bVu4sGc8G9tkfvmzr-9XiEw3-pJfkcrKUKH-m8pTT_I5VMf5nicPxjdXgjxQ1_N7vw-DNM7Pr_rVqijUkSuGv7nbtZS1WZ6C1Yvm8aFXhocOmcW4NxTPoUVXz3TFlHDP-ExRu1UXq6tzOpABOSiUHTZh"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-h3 text-h3 mb-2">Agente de Atendimento WhatsApp</h4>
+<p class="text-secondary">Implementação de IA generativa para Associaçõess veiculáres, Pet Shops e Clinicas Médicas reduzindo tempo de resposta em 95%.</p>
+</div>
+<span class="bg-primary-container/20 text-on-primary-container px-4 py-1 rounded-full text-xs font-bold">IA / BOT</span>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-video rounded-[32px] overflow-hidden mb-6 relative">
+<img alt="Lead Generation Automation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean and bright desktop screen showing professional data visualization charts with vibrant blue and cyan accents. The room is a minimalist home office with natural light, reflecting a sense of organized productivity and growth. The overall aesthetic is breathable and high-tech, symbolizing successful lead generation and business scaling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPCrOst-7z0dQkP4PDjhpwc7yJSYKbPk9LRPaeOWeGfGIVWIZzP6-5nFmnuMlrm4Lu0ZsIbt80AWaQgOp6Ey-8uTqttAop3WYmjhBpePxVGO8Uqb7uRmaFCR4nLsWYXvaon1afWDfN3j9JWHsUMpoxXJY6amK-59YZMJXGPSB20tEQ2I6LpWwGjG5N9t117Ca5stynR2n4s_olLUyNGpt8wkCfJlFkvkTQgD78zQDH_8s96viwzHjrubO5wFCNNzR0ykltdgPFL-U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-h3 text-h3 mb-2">Automação de Captação de Leads</h4>
+<p class="text-secondary">Funil automático integrado com CRM que aumentou a conversão em 40% em 3 meses.</p>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-xs font-bold">MARKETING</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-video rounded-[32px] overflow-hidden mb-6 relative">
+<img alt="Desenvolvimento de Sites &amp; Landing Pages" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE5yw7xMhEjoX7Ud6K1HkEDz71N09Os53FLnIpirC_AXpf6d63r4ZG6DbDZ6GWcOP_TjD3TcMvKPzQmCCNPJdQGuPDQV6QHGhidqOYsk8P99x83d3mAVg_1R9mQgQkvCvZOCm1rc7xcxZB-ShCtXb2FP0quygcPSUg22jaXNadcrZShpwBJE33d3A5XGm8_W7HwnvLlXwRixa97JxpYMH8VLwQV7aKV4Rq3EkB3PVlRzadAoytL5xLO9ZdfaIiKSGelus1QGdvbPs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-h3 text-h3 mb-2">Sites &amp; Landing Pages</h4>
+<p class="text-secondary text-sm">Desenvolvimento de interfaces de alta conversão com foco em UX/UI premium e performance extrema.</p>
+</div>
+<span class="bg-tertiary-container text-on-tertiary-container px-4 py-1 rounded-full text-xs font-bold whitespace-nowrap">WEB DESIGN</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 px-6">
+<div class="max-w-5xl mx-auto bg-primary-container rounded-[40px] p-12 md:p-20 text-center space-y-8 relative overflow-hidden accent-gradient">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<div class="absolute -top-20 -left-20 w-80 h-80 bg-white rounded-full blur-[100px]"></div>
+<div class="absolute -bottom-20 -right-20 w-80 h-80 bg-white rounded-full blur-[100px]"></div>
+</div>
+<h2 class="font-h1 text-h1 text-white">Pronto para escalar seu atendimento?</h2>
+<p class="text-white/80 font-body-lg text-body-lg max-w-xl mx-auto">Agende uma demonstração gratuita e descubra como podemos automatizar sua jornada de vendas.</p>
+<div class="pt-6">
+<button class="bg-white text-primary px-10 py-5 rounded-2xl font-bold text-lg hover:shadow-xl transition-all active:scale-95">
+                    Falar com Especialista
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-slate-200 bg-slate-50">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="text-lg font-black text-slate-900">RiegosDev</span>
+<p class="font-sans text-xs uppercase tracking-widest text-slate-500">© 2024 RiegosDev. Todos os direitos reservados.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-sans text-xs uppercase tracking-widest text-slate-500 hover:text-cyan-500 transition-colors" href="#">Privacidade</a>
+<a class="font-sans text-xs uppercase tracking-widest text-slate-500 hover:text-cyan-500 transition-colors" href="#">Termos</a>
+<a class="font-sans text-xs uppercase tracking-widest text-slate-500 hover:text-cyan-500 transition-colors" href="#">LinkedIn</a>
+<a class="font-sans text-xs uppercase tracking-widest text-slate-500 hover:text-cyan-500 transition-colors" href="#">GitHub</a>
+</div>
+</div>
+</footer>
+</body></html>

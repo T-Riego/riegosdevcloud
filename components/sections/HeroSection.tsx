@@ -14,12 +14,10 @@ export function HeroSection() {
             <span className="text-label-sm">Especialistas em Automação IA</span>
           </div>
           <h1 className="font-h1 text-h1 text-on-background max-w-xl">
-            {content.hero.headline.split('máquina de captação')[0]}
-            <span className="text-primary">máquina de captação</span>
-            {content.hero.headline.split('máquina de captação')[1]}
+            Transformamos atendimento em <span className="text-primary">máquina de captação</span> de clientes
           </h1>
           <p className="font-body-lg text-body-lg text-secondary max-w-lg">
-            {content.hero.subheadline}
+            Não é só automação. É crescimento previsível: Atendimentos para Whatsapp, redução de trabalho manual, sem falhas.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <a 
