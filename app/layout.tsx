@@ -1,18 +1,11 @@
 import type { Metadata } from 'next'
-import { Space_Grotesk, Inter } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 import { LocaleProvider } from '@/context/LocaleContext'
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  variable: '--font-space-grotesk',
-  display: 'swap',
-})
-
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['400', '500', '700'],
+  weight: ['400', '600', '700'],
   variable: '--font-inter',
   display: 'swap',
 })
@@ -58,13 +51,9 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `document.documentElement.style.backgroundColor='#0A0A0A';`,
-          }}
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
-      <body className={`${spaceGrotesk.variable} ${inter.variable} font-body bg-background text-primary`}>
+      <body className={`${inter.variable} font-body-md overflow-x-hidden`}>
         <LocaleProvider>
           {children}
         </LocaleProvider>
