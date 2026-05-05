@@ -17,17 +17,10 @@ export function Footer() {
           </p>
         </div>
         <div className="flex gap-8">
-          {content.footer.links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="font-sans text-xs uppercase tracking-widest text-slate-500 hover:text-cyan-500 transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {link.label}
-            </a>
-          ))}
+          <a className="font-sans text-xs uppercase tracking-widest text-slate-500 hover:text-cyan-500 transition-colors" href="#">Privacidade</a>
+          <a className="font-sans text-xs uppercase tracking-widest text-slate-500 hover:text-cyan-500 transition-colors" href="#">Termos</a>
+          <a className="font-sans text-xs uppercase tracking-widest text-slate-500 hover:text-cyan-500 transition-colors" href="https://linkedin.com">LinkedIn</a>
+          <a className="font-sans text-xs uppercase tracking-widest text-slate-500 hover:text-cyan-500 transition-colors" href="https://github.com">GitHub</a>
         </div>
       </div>
     </footer>

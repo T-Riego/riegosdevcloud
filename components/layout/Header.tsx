@@ -62,7 +62,7 @@ export function Header() {
             rel="noopener noreferrer"
             className="bg-primary-container text-on-primary-container px-5 py-2 rounded-full font-sans text-sm font-bold active:scale-95 transition-transform accent-gradient"
           >
-            {content.hero.cta.primary}
+            {content.hero.ctaWhatsApp}
           </a>
 
           {/* Mobile Menu Button */}
