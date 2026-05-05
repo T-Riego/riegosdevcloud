@@ -37,7 +37,7 @@ export function PortfolioSection() {
           </div>
           {/* Comparison Block */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center bg-white p-8 md:p-12 rounded-[40px] border border-outline-variant/20 soft-card-shadow">
-            <div className="space-y-8">
+            <div className="bg-slate-50/50 p-8 rounded-3xl space-y-8 border border-slate-200/50">
               <h3 className="font-bold text-sm tracking-widest text-secondary uppercase">A REALIDADE DA SUA OPERAÇÃO</h3>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
