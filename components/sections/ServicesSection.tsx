@@ -53,16 +53,26 @@ export function ServicesSection() {
             </div>
           </div>
 
-          {/* Service Card 3 (Captação de Clientes) */}
-          <div className="bg-white p-8 rounded-3xl border border-outline-variant/30 soft-card-shadow flex flex-col justify-between">
+          {/* Service Card 3 (Videos & Roteiros) */}
+          <div className="bg-white p-8 rounded-3xl border border-outline-variant/30 soft-card-shadow flex flex-col justify-between group">
             <div className="space-y-4">
               <div className="w-12 h-12 bg-secondary-fixed rounded-2xl flex items-center justify-center text-secondary">
-                <span className="material-symbols-outlined text-[32px]">filter_alt</span>
+                <span className="material-symbols-outlined text-[32px]">movie</span>
               </div>
               <h3 className="font-h3 text-[22px] leading-tight text-on-background">{content.services.items[2].title}</h3>
               <p className="text-secondary text-sm">
                 {content.services.items[2].description}
               </p>
+            </div>
+            <div className="mt-8 overflow-hidden rounded-2xl bg-surface-container-lowest">
+              <video 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" 
+                src="/Imagens/Divulgacao%20lu%2002.mp4"
+              />
             </div>
           </div>
 

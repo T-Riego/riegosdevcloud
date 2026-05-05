@@ -76,8 +76,8 @@ export const en: SiteContent = {
       },
       {
         id: 'leads',
-        title: 'Lead Generation',
-        description: 'Intelligent funnels that automatically identify, qualify, and nurture leads — delivering sales-ready opportunities.',
+        title: 'High-Conversion Videos & Scripts',
+        description: 'Creation of cinematic videos and specialized scripts to retain audience attention and drastically leverage your sales.',
       },
       {
         id: 'sites',

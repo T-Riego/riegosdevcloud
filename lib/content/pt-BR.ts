@@ -74,8 +74,8 @@ export const ptBR = {
       },
       {
         id: 'leads',
-        title: 'Captação de Clientes',
-        description: 'Funis inteligentes que identificam, qualificam e nutrem leads automaticamente, entregando oportunidades prontas para fechar.',
+        title: 'Vídeos & Roteiros de Alta Conversão',
+        description: 'Criação de vídeos cinematográficos e roteiros especializados para reter a atenção do público e alavancar drasticamente as suas vendas.',
       },
       {
         id: 'sites',
