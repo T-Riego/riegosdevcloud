@@ -6,8 +6,8 @@ export function PortfolioSection() {
   const { content } = useLocale()
 
   return (
-    <div id="portfolio">
-      <section className="py-20 bg-surface-container-low">
+    <div className="flex flex-col">
+      <section id="processo" className="py-20 bg-surface-container-low">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="font-h2 text-h2 text-on-background">Como sua operação começa a gerar resultados</h2>
@@ -75,7 +75,7 @@ export function PortfolioSection() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section id="portfolio" className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
             <div className="space-y-4">
@@ -90,44 +90,72 @@ export function PortfolioSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-3">
             {/* Project 1 */}
             <div className="group cursor-pointer">
-              <div className="aspect-video rounded-[32px] overflow-hidden mb-6 relative">
-                <img alt="WhatsApp Bot Case" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0uiKKMPVk7b7PfPPXbKxkSVu5qtjUUHoOuw6CbWyhG09gG-NteDfcVkdnoGIiYBm9t39uRpxgHlvso_hXKuY9GshS7NyRwy4_3uOxYuA3plu_p_ennR6bVu4sGc8G9tkfvmzr-9XiEw3-pJfkcrKUKH-m8pTT_I5VMf5nicPxjdXgjxQ1_N7vw-DNM7Pr_rVqijUkSuGv7nbtZS1WZ6C1Yvm8aFXhocOmcW4NxTPoUVXz3TFlHDP-ExRu1UXq6tzOpABOSiUHTZh" />
+              <div className="aspect-video rounded-[32px] overflow-hidden mb-6 relative bg-surface-container-lowest">
+                <img alt="WhatsApp Bot Case" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/Imagens/conectaseguro.png" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </div>
-              <div className="flex justify-between items-start">
-                <div>
+              <div className="flex justify-between items-start gap-4">
+                <div className="w-full">
                   <h4 className="font-h3 text-h3 mb-2">Agente de Atendimento WhatsApp</h4>
-                  <p className="text-secondary">Implementação de IA generativa para Associações veiculares, Pet Shops e Clínicas Médicas reduzindo tempo de resposta em 95%.</p>
+                  <p className="text-secondary text-sm mb-4">
+                    Atendimento inteligente alimentado com os dados da sua empresa.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2.5 py-1 bg-surface-container-high text-secondary text-[11px] font-medium rounded-md border border-outline-variant/50">Recebe Cliente</span>
+                    <span className="px-2.5 py-1 bg-surface-container-high text-secondary text-[11px] font-medium rounded-md border border-outline-variant/50">Responde Dúvidas</span>
+                    <span className="px-2.5 py-1 bg-surface-container-high text-secondary text-[11px] font-medium rounded-md border border-outline-variant/50">Consulta Placa</span>
+                    <span className="px-2.5 py-1 bg-surface-container-high text-secondary text-[11px] font-medium rounded-md border border-outline-variant/50">Gera Proposta</span>
+                    <span className="px-2.5 py-1 bg-surface-container-high text-secondary text-[11px] font-medium rounded-md border border-outline-variant/50">Agenda Vistoria</span>
+                    <span className="px-2.5 py-1 bg-surface-container-high text-secondary text-[11px] font-medium rounded-md border border-outline-variant/50">Follow-up Automático</span>
+                  </div>
                 </div>
-                <span className="bg-primary-container/20 text-on-primary-container px-4 py-1 rounded-full text-xs font-bold whitespace-nowrap h-fit">IA / BOT</span>
+                <span className="bg-primary-container/20 text-on-primary-container px-4 py-1 rounded-full text-xs font-bold whitespace-nowrap h-fit shrink-0 hidden sm:block">IA / BOT</span>
               </div>
             </div>
             {/* Project 2 */}
             <div className="group cursor-pointer">
-              <div className="aspect-video rounded-[32px] overflow-hidden mb-6 relative">
-                <img alt="Lead Generation Automation" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPCrOst-7z0dQkP4PDjhpwc7yJSYKbPk9LRPaeOWeGfGIVWIZzP6-5nFmnuMlrm4Lu0ZsIbt80AWaQgOp6Ey-8uTqttAop3WYmjhBpePxVGO8Uqb7uRmaFCR4nLsWYXvaon1afWDfN3j9JWHsUMpoxXJY6amK-59YZMJXGPSB20tEQ2I6LpWwGjG5N9t117Ca5stynR2n4s_olLUyNGpt8wkCfJlFkvkTQgD78zQDH_8s96viwzHjrubO5wFCNNzR0ykltdgPFL-U" />
+              <div className="aspect-video rounded-[32px] overflow-hidden mb-6 relative bg-surface-container-lowest">
+                <img alt="ConectaSaúde Bot Case" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/Imagens/conectasaude.png" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </div>
-              <div className="flex justify-between items-start">
-                <div>
-                  <h4 className="font-h3 text-h3 mb-2">Automação de Captação de Leads</h4>
-                  <p className="text-secondary">Funil automático integrado com CRM que aumentou a conversão em 40% em 3 meses.</p>
+              <div className="flex justify-between items-start gap-4">
+                <div className="w-full">
+                  <h4 className="font-h3 text-h3 mb-2">ConectaSaúde</h4>
+                  <p className="text-secondary text-sm mb-4">
+                    Solucione o gargalo na recepção e deixe suas atendentes focadas no que realmente importa: seus pacientes.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2.5 py-1 bg-surface-container-high text-secondary text-[11px] font-medium rounded-md border border-outline-variant/50">Atendimento Humanizado</span>
+                    <span className="px-2.5 py-1 bg-surface-container-high text-secondary text-[11px] font-medium rounded-md border border-outline-variant/50">Agendamento de Pacientes</span>
+                    <span className="px-2.5 py-1 bg-surface-container-high text-secondary text-[11px] font-medium rounded-md border border-outline-variant/50">Informações Úteis</span>
+                    <span className="px-2.5 py-1 bg-surface-container-high text-secondary text-[11px] font-medium rounded-md border border-outline-variant/50">Marcação Automática</span>
+                    <span className="px-2.5 py-1 bg-surface-container-high text-secondary text-[11px] font-medium rounded-md border border-outline-variant/50">Lembrete de Consultas</span>
+                  </div>
                 </div>
-                <span className="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-xs font-bold whitespace-nowrap h-fit">MARKETING</span>
+                <span className="bg-secondary-container/30 text-on-secondary-container px-4 py-1 rounded-full text-xs font-bold whitespace-nowrap h-fit mt-1 shrink-0 hidden sm:block">IA / CLÍNICAS</span>
               </div>
             </div>
             {/* Project 3 */}
             <div className="group cursor-pointer">
-              <div className="aspect-video rounded-[32px] overflow-hidden mb-6 relative">
-                <img alt="Desenvolvimento de Sites & Landing Pages" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE5yw7xMhEjoX7Ud6K1HkEDz71N09Os53FLnIpirC_AXpf6d63r4ZG6DbDZ6GWcOP_TjD3TcMvKPzQmCCNPJdQGuPDQV6QHGhidqOYsk8P99x83d3mAVg_1R9mQgQkvCvZOCm1rc7xcxZB-ShCtXb2FP0quygcPSUg22jaXNadcrZShpwBJE33d3A5XGm8_W7HwnvLlXwRixa97JxpYMH8VLwQV7aKV4Rq3EkB3PVlRzadAoytL5xLO9ZdfaIiKSGelus1QGdvbPs" />
+              <div className="aspect-video rounded-[32px] overflow-hidden mb-6 relative bg-surface-container-lowest">
+                <img alt="Desenvolvimento de Sites & Landing Pages" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/Imagens/AtualEpi.png" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </div>
-              <div className="flex justify-between items-start">
-                <div>
+              <div className="flex justify-between items-start gap-4">
+                <div className="w-full">
                   <h4 className="font-h3 text-h3 mb-2">Sites &amp; Landing Pages</h4>
-                  <p className="text-secondary text-sm">Desenvolvimento de interfaces de alta conversão com foco em UX/UI premium e performance extrema.</p>
+                  <p className="text-secondary text-sm mb-4">
+                    Desenvolvimento de interfaces de alta conversão com foco em UX/UI premium e performance extrema. Personalize o site da sua empresa com design profissional e otimização de busca. Sua marca aparece, o cliente também.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="px-2.5 py-1 bg-surface-container-high text-secondary text-[11px] font-medium rounded-md border border-outline-variant/50">Alta Conversão</span>
+                    <span className="px-2.5 py-1 bg-surface-container-high text-secondary text-[11px] font-medium rounded-md border border-outline-variant/50">UX/UI Premium</span>
+                    <span className="px-2.5 py-1 bg-surface-container-high text-secondary text-[11px] font-medium rounded-md border border-outline-variant/50">Performance Extrema</span>
+                    <span className="px-2.5 py-1 bg-surface-container-high text-secondary text-[11px] font-medium rounded-md border border-outline-variant/50">Design Profissional</span>
+                    <span className="px-2.5 py-1 bg-surface-container-high text-secondary text-[11px] font-medium rounded-md border border-outline-variant/50">Otimização SEO</span>
+                  </div>
                 </div>
-                <span className="bg-tertiary-container text-on-tertiary-container px-4 py-1 rounded-full text-xs font-bold whitespace-nowrap h-fit">WEB DESIGN</span>
+                <span className="bg-tertiary-container/30 text-on-tertiary-container px-4 py-1 rounded-full text-xs font-bold whitespace-nowrap h-fit mt-1 shrink-0 hidden sm:block">WEB DESIGN</span>
               </div>
             </div>
           </div>

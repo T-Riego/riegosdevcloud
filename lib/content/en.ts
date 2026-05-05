@@ -30,12 +30,12 @@ export const en: SiteContent = {
   },
   hero: {
     headline: 'More responses, more organization, more clients closing.',
-    subheadline: 'AI automation, WhatsApp agents and full stack development for companies that want to grow.',
+    subheadline: 'It\'s not just automation. It\'s predictable growth: WhatsApp customer service, reduction of manual work, zero failures. For companies that want to grow and profit more.',
     typewriterItems: [
-      'Intelligent Automation',
-      'WhatsApp Agents',
+      'Turn spreadsheets into data',
+      'Automated scheduling, reminders and follow-ups without errors',
       'Intelligent Lead Generation',
-      'Digital Marketing with AI',
+      'Personalized digital marketing',
     ],
     ctaPrimary: 'View Projects',
     ctaWhatsApp: 'Talk to a Specialist',
@@ -67,7 +67,7 @@ export const en: SiteContent = {
       {
         id: 'automation',
         title: 'Intelligent Automation',
-        description: 'Repetitive processes eliminated with intelligent agents. From email campaigns to order processing — all automatic.',
+        description: 'Eliminate repetitive tasks and human errors through end-to-end process orchestration with the best technologies on the market.',
       },
       {
         id: 'whatsapp',
@@ -86,7 +86,7 @@ export const en: SiteContent = {
       },
       {
         id: 'apps',
-        title: 'Facebook Ads & Aggressive Marketing',
+        title: 'Facebook Ads & Creative Marketing',
         description: 'Facebook and Instagram ad campaigns created and managed with AI — precise targeting, optimized creatives, and scale to maximize your return.',
       },
       {

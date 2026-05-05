@@ -1,6 +1,13 @@
 # Próximos Passos - Riegos Dev
 
-Atualizado em: 2026-05-04
+Atualizado em: 2026-05-05
+
+## Design & Layout (Stitch Visual Refresh)
+
+- [x] Aplicar nova paleta de cores light e remover tema dark.
+- [x] Refatorar Hero, Services, Portfolio e Footer para o novo design minimalista.
+- [x] Corrigir conflitos de Tailwind V4 no layout responsivo (resolvido bug de quebra de grid/texto).
+- [ ] Trocar imagens de placeholders do Stitch por imagens/prints reais dos cases.
 
 ## Documentação
 
@@ -20,7 +27,7 @@ Atualizado em: 2026-05-04
 ## Código
 
 - [ ] Rodar `npm run lint`.
-- [ ] Rodar `npm run build`.
+- [x] Rodar `npm run build`. (Passou com sucesso sem erros após correção do Tailwind V4)
 - [ ] Verificar se `components/ui/ScrollAnimator.tsx`, `ScrollAnimations.tsx` e componentes similares ainda estão em uso.
 - [ ] Verificar responsividade do marquee de depoimentos em mobile.
 - [ ] Conferir acessibilidade do modal de portfólio: foco inicial, Escape para fechar e retorno de foco.

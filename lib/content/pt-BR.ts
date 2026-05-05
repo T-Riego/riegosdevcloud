@@ -65,7 +65,7 @@ export const ptBR = {
       {
         id: 'automation',
         title: 'Automação Inteligente',
-        description: 'Processos repetitivos eliminados com agentes inteligentes. Do disparo de e-mails ao processamento de pedidos, tudo automático.',
+        description: 'Elimine tarefas repetitivas e erros humanos através da orquestração de processos ponta a ponta com as melhores tecnologias do mercado.',
       },
       {
         id: 'whatsapp',

@@ -22,6 +22,7 @@ export function Header() {
 
   const navLinks = [
     { key: 'servicos',    label: content.nav.links.servicos },
+    { key: 'processo',    label: content.nav.links.processo },
     { key: 'portfolio',   label: content.nav.links.portfolio },
   ]
 
