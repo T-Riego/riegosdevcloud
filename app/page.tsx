@@ -4,6 +4,7 @@ import { Footer } from '@/components/layout/Footer'
 import { HeroSection } from '@/components/sections/HeroSection'
 import { ServicesSection } from '@/components/sections/ServicesSection'
 import { PortfolioSection } from '@/components/sections/PortfolioSection'
+import { DiagnosticSection } from '@/components/sections/DiagnosticSection'
 import { CtaSection } from '@/components/sections/CtaSection'
 import { WhatsAppFab } from '@/components/ui/WhatsAppFab'
 import { SmoothScroll } from '@/components/ui/SmoothScroll'
@@ -17,6 +18,7 @@ export default function Home() {
         <HeroSection />
         <ServicesSection />
         <PortfolioSection />
+        <DiagnosticSection />
         <CtaSection />
       </main>
       <Footer />
