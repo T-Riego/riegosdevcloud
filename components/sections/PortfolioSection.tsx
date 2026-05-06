@@ -1,10 +1,4 @@
-'use client'
-
-import { useLocale } from '@/context/LocaleContext'
-
 export function PortfolioSection() {
-  const { content } = useLocale()
-
   return (
     <div className="flex flex-col">
       <section id="processo" className="py-20 bg-surface-container-low">

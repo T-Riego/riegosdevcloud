@@ -1,11 +1,4 @@
-'use client'
-
-import { useLocale } from '@/context/LocaleContext'
-
 export function CtaSection() {
-  const { content } = useLocale()
-
-  // We can use static text for now based on the design, or try to map it to content.hero.cta
   return (
     <section className="py-20 px-6">
       <div className="max-w-5xl mx-auto bg-primary-container rounded-[40px] p-12 md:p-20 text-center space-y-8 relative overflow-hidden accent-gradient">

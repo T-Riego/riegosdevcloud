@@ -1,23 +1,20 @@
 # Stack - Riegos Dev
 
-Atualizado em: 2026-05-04
+Atualizado em: 2026-05-06
 
 ## Stack instalada
 
 Fonte: `package.json`.
 
-| Tecnologia | Versão atual | Uso |
+| Tecnologia | Versao atual | Uso |
 |---|---:|---|
-| Next.js | 16.2.2 | App Router, metadata, sitemap, renderização React |
+| Next.js | 16.2.2 | App Router, metadata, sitemap, renderizacao React |
 | React | 19.2.4 | UI |
 | TypeScript | ^5 | Tipagem |
-| Tailwind CSS | ^4 | CSS utilitário e tokens via `@theme` |
-| motion | ^12.38.0 | Animações de entrada, stagger e modal |
-| @tsparticles/react | ^3.0.0 | Partículas no hero |
-| @tsparticles/slim | ^3.9.1 | Engine slim das partículas |
+| Tailwind CSS | ^4 | CSS utilitario e tokens via `@theme` |
+| motion | ^12.38.0 | Animacoes pontuais |
 | lenis | ^1.3.21 | Smooth scroll |
-| lucide-react | ^1.7.0 | Ícones |
-| react-type-animation | ^3.2.0 | Typewriter do hero |
+| lucide-react | ^1.7.0 | Icones |
 
 ## Scripts
 
@@ -32,19 +29,19 @@ npm run lint
 
 Tokens definidos em `app/globals.css`:
 
-- background: `#0A0A0A`
-- surface: `#111111`
-- accent: `#00FFFF`
-- text primary: `#FFFFFF`
-- text secondary: `#E0E0E0`
+- background: `#f7f9fb`
+- surface: `#ffffff`
+- primary: `#006a6a`
+- primary container: `#00ffff`
+- text primary: `#191c1e`
+- text secondary: `#545f73`
 
-Fontes:
+Fonte:
 
-- headings: Space Grotesk via `next/font/google`
-- body: Inter via `next/font/google`
+- Inter via `next/font/google`.
 
-## Pontos de atenção
+## Observacoes
 
-- `CLAUDE.md` e `PRD-LOVABLE.md` ainda citam Next.js 15, mas o projeto atual já está em Next.js 16.2.2.
-- A dependência instalada é `motion`, importada como `motion/react`, não `framer-motion`.
-- O i18n não usa `next-intl`; usa React Context próprio em `context/LocaleContext.tsx`.
+- O projeto atual nao deve usar dark theme como base.
+- O projeto atual nao deve usar particulas no hero, header ou background.
+- O i18n nao usa `next-intl`; usa React Context proprio em `context/LocaleContext.tsx`.

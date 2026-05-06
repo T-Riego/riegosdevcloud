@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { useLocale } from '@/context/LocaleContext'
 
 export function Header() {
@@ -32,9 +33,9 @@ export function Header() {
     }`}>
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center gap-8">
-          <a href="/" className="text-xl font-bold tracking-tighter text-slate-900">
+          <Link href="/" className="text-xl font-bold tracking-tighter text-slate-900">
             RiegosDev
-          </a>
+          </Link>
           <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <a

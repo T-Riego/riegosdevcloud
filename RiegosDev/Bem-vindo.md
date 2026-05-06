@@ -1,8 +1,8 @@
 # Riegos Dev - Hub do projeto
 
-Atualizado em: 2026-05-04
+Atualizado em: 2026-05-06
 
-Este cofre documenta o site institucional da Riegos Dev a partir do estado real do repositório `F:\RiegosDev\RiegosdevCloud`.
+Este cofre documenta o site institucional da Riegos Dev a partir do estado real do repositorio `F:\RiegosDev\RiegosdevCloud`.
 
 ## Notas principais
 
@@ -15,11 +15,11 @@ Este cofre documenta o site institucional da Riegos Dev a partir do estado real 
 
 ## Estado atual
 
-O projeto é uma SPA institucional em Next.js com App Router, bilíngue PT-BR/EN, dark theme, animações, partículas no hero e conversão via WhatsApp.
+O projeto e uma SPA institucional em Next.js com App Router, bilingue PT-BR/EN, light theme, header claro, hero sem particulas e conversao via WhatsApp.
 
-O conteúdo atual posiciona a Riegos Dev como solução de automação inteligente, atendimento 24/7 via WhatsApp, captação de clientes e marketing digital com IA. A seção Sobre apresenta Daniel Riêgo e Tiago Riêgo como responsáveis pela operação.
+O conteudo atual posiciona a Riegos Dev como solucao de automacao inteligente, atendimento 24/7 via WhatsApp, marketing digital com IA, videos e sites/landing pages. A operacao apresenta Daniel Riego e Tiago Riego.
 
-## Comandos úteis
+## Comandos uteis
 
 ```bash
 npm run dev
@@ -27,9 +27,9 @@ npm run build
 npm run lint
 ```
 
-## Observações rápidas
+## Observacoes rapidas
 
-- O PRD antigo ainda cita Next.js 15, mas o `package.json` atual usa Next.js 16.2.2.
-- A documentação antiga falava apenas em Tiago; o conteúdo atual do site já está em formato de equipe com Daniel e Tiago.
-- O conteúdo central vive em `lib/content/pt-BR.ts` e `lib/content/en.ts`.
-- O WhatsApp principal configurado no site é `+55 31 98896-9661`.
+- A direcao antiga de dark theme e particulas foi removida da documentacao principal.
+- O conteudo central vive em `lib/content/pt-BR.ts` e `lib/content/en.ts`.
+- O WhatsApp principal configurado no site e `+55 31 98896-9661`.
+- Existe uma tag de restauracao: `restore-before-light-redesign`.

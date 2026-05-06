@@ -1,10 +1,6 @@
-'use client'
 // components/layout/Footer.tsx
 
-import { useLocale } from '@/context/LocaleContext'
-
 export function Footer() {
-  const { content } = useLocale()
   const year = new Date().getFullYear()
 
   return (

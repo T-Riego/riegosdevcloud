@@ -77,18 +77,21 @@ export function ServicesSection() {
           </div>
 
           {/* Service Card 4 (Sites & Landing Pages) */}
-          <div className="md:col-span-2 bg-slate-900 p-8 rounded-3xl flex flex-col md:flex-row items-center gap-8 text-white overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 blur-[100px]"></div>
+          <div className="md:col-span-2 bg-white p-8 rounded-3xl border border-outline-variant/30 soft-card-shadow flex flex-col md:flex-row items-center gap-8 overflow-hidden relative group">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-primary-container/20 blur-[100px]"></div>
             <div className="space-y-4 z-10">
-              <h3 className="font-h3 text-h3">{content.services.items[3].title}</h3>
-              <p className="text-slate-400 max-w-sm">
+              <div className="w-12 h-12 bg-primary-container/20 rounded-2xl flex items-center justify-center text-primary">
+                <span className="material-symbols-outlined text-[32px]">language</span>
+              </div>
+              <h3 className="font-h3 text-h3 text-on-background">{content.services.items[3].title}</h3>
+              <p className="text-secondary max-w-sm">
                 {content.services.items[3].description}
               </p>
               <a 
                 href="https://wa.me/5531988969661?text=Ol%C3%A1%2C+tenho+interesse+em+um+site."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-cyan-400 font-semibold flex items-center gap-2 group cursor-pointer"
+                className="text-primary font-semibold flex items-center gap-2 cursor-pointer"
               >
                 Solicitar Orçamento
                 <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
@@ -97,7 +100,7 @@ export function ServicesSection() {
             <div className="w-full h-full z-10">
               <img 
                 alt="Modern Landing Page" 
-                className="rounded-xl shadow-2xl transform lg:rotate-3 lg:translate-x-10" 
+                className="rounded-xl border border-outline-variant/30 shadow-xl transform lg:rotate-3 lg:translate-x-10 transition-transform duration-700 group-hover:scale-105" 
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE5yw7xMhEjoX7Ud6K1HkEDz71N09Os53FLnIpirC_AXpf6d63r4ZG6DbDZ6GWcOP_TjD3TcMvKPzQmCCNPJdQGuPDQV6QHGhidqOYsk8P99x83d3mAVg_1R9mQgQkvCvZOCm1rc7xcxZB-ShCtXb2FP0quygcPSUg22jaXNadcrZShpwBJE33d3A5XGm8_W7HwnvLlXwRixa97JxpYMH8VLwQV7aKV4Rq3EkB3PVlRzadAoytL5xLO9ZdfaIiKSGelus1QGdvbPs"
               />
             </div>

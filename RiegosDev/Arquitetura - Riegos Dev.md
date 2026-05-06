@@ -1,29 +1,31 @@
 # Arquitetura - Riegos Dev
 
-Atualizado em: 2026-05-04
+Atualizado em: 2026-05-06
 
-## Visão técnica
+## Visao tecnica
 
-Aplicação Next.js App Router com uma rota principal em `app/page.tsx`. A página monta seções client-side com conteúdo tipado vindo de arquivos centrais de i18n.
+Aplicacao Next.js App Router com uma rota principal em `app/page.tsx`. A pagina monta secoes client-side com conteudo tipado vindo de arquivos centrais de i18n.
 
-## Fluxo de renderização
+## Fluxo de renderizacao
 
 `app/layout.tsx` configura:
 
-- fontes Space Grotesk e Inter com `next/font`;
+- fonte Inter com `next/font`;
 - metadata SEO e Open Graph;
-- script anti-FOUC para manter fundo escuro antes da hidratação;
-- `LocaleProvider` envolvendo a aplicação.
+- `LocaleProvider` envolvendo a aplicacao.
 
 `app/page.tsx` monta a landing page:
 
 - `SmoothScroll`
 - `Header`
-- seções principais
+- `HeroSection`
+- `ServicesSection`
+- `PortfolioSection`
+- `CtaSection`
 - `Footer`
 - `WhatsAppFab`
 
-## Conteúdo e i18n
+## Conteudo e i18n
 
 Arquivos centrais:
 
@@ -32,14 +34,14 @@ Arquivos centrais:
 - `lib/types.ts`
 - `context/LocaleContext.tsx`
 
-O padrão atual é:
+Padrao atual:
 
-- PT-BR como idioma padrão;
-- preferência salva em `localStorage` com chave `locale`;
-- toggle instantâneo sem trocar rota;
+- PT-BR como idioma padrao;
+- preferencia salva em `localStorage` com chave `locale`;
+- toggle instantaneo sem trocar rota;
 - `en.ts` tipado contra `SiteContent`, derivado de `pt-BR.ts`.
 
-Regra importante: evitar strings visíveis inline nos componentes. O conteúdo deve entrar pelos objetos `ptBR` e `en`.
+Regra importante: evitar strings visiveis inline nos componentes novos. O conteudo deve entrar pelos objetos `ptBR` e `en` sempre que possivel.
 
 ## Componentes principais
 
@@ -48,39 +50,30 @@ Layout:
 - `components/layout/Header.tsx`
 - `components/layout/Footer.tsx`
 
-Seções:
+Secoes ativas:
 
 - `HeroSection`
 - `ServicesSection`
 - `PortfolioSection`
-- `ProcessSection`
-- `TestimonialsSection`
-- `AboutSection`
-- `ContactSection`
+- `CtaSection`
 
 UI compartilhada:
 
-- `AnimateOnScroll`
-- `ParticleBackground`
 - `SmoothScroll`
-- `SectionDivider`
-- `ProcessLine`
 - `WhatsAppFab`
+- utilitarios legados de animacao ainda presentes para revisao posterior.
 
-## Interações relevantes
+## Interacoes relevantes
 
-- Header sticky com detecção de scroll.
+- Header sticky com deteccao de scroll.
 - Menu mobile com scroll lock no `body`.
-- Toggle PT-BR/EN com persistência.
-- Hero com partículas carregadas por `dynamic(..., { ssr: false })`.
-- Typewriter reiniciado por `key={locale}`.
-- Portfólio abre modal com `AnimatePresence`.
-- Contato monta mensagem estruturada e abre `wa.me`.
-- Depoimentos usam marquee CSS com lista duplicada.
+- Toggle PT-BR/EN com persistencia.
+- Hero claro em duas colunas, sem particulas.
+- Contato e CTAs abrem `wa.me`.
 
 ## SEO
 
-Atualmente configurado em:
+Configurado em:
 
 - `app/layout.tsx`: metadata principal, Open Graph, Twitter Card, robots e alternates.
 - `app/sitemap.ts`: sitemap com `https://riegosdev.com`.

@@ -1,28 +1,28 @@
-# Mapa do Código - Riegos Dev
+# Mapa do Codigo - Riegos Dev
 
-Atualizado em: 2026-05-04
+Atualizado em: 2026-05-06
 
 ## Raiz
 
-- `package.json`: dependências e scripts.
-- `next.config.ts`: configuração do Next.js.
-- `tsconfig.json`: aliases e configuração TypeScript.
+- `package.json`: dependencias e scripts.
+- `next.config.ts`: configuracao do Next.js.
+- `tsconfig.json`: aliases e configuracao TypeScript.
 - `eslint.config.mjs`: ESLint.
-- `CLAUDE.md`: contexto antigo do projeto e workflow GSD.
-- `PRD-LOVABLE.md`: PRD original, parcialmente desatualizado em relação ao código atual.
+- `CLAUDE.md`: contexto atual para agentes.
+- `PRD-LOVABLE.md`: PRD atual do site.
 
 ## App Router
 
-- `app/layout.tsx`: layout raiz, fontes, metadata, provider de locale.
-- `app/page.tsx`: composição da SPA.
-- `app/globals.css`: Tailwind v4, tokens de tema, animações globais.
+- `app/layout.tsx`: layout raiz, fonte Inter, metadata e provider de locale.
+- `app/page.tsx`: composicao da SPA.
+- `app/globals.css`: Tailwind v4, tokens do tema claro e utilitarios globais.
 - `app/sitemap.ts`: sitemap.
 
-## Conteúdo
+## Conteudo
 
-- `lib/content/pt-BR.ts`: fonte principal de conteúdo e tipo `SiteContent`.
-- `lib/content/en.ts`: tradução inglesa validada contra `SiteContent`.
-- `lib/types.ts`: tipos públicos de locale e conteúdo.
+- `lib/content/pt-BR.ts`: fonte principal de conteudo e tipo `SiteContent`.
+- `lib/content/en.ts`: traducao inglesa validada contra `SiteContent`.
+- `lib/types.ts`: tipos publicos de locale e conteudo.
 
 ## Estado global
 
@@ -31,34 +31,21 @@ Atualizado em: 2026-05-04
 ## Layout
 
 - `components/layout/Header.tsx`: logo, links, idioma, menu mobile e scroll lock.
-- `components/layout/Footer.tsx`: logo, links rápidos, social placeholders e copyright.
+- `components/layout/Footer.tsx`: logo, links e copyright.
 
-## Seções
+## Secoes ativas
 
-- `components/sections/HeroSection.tsx`: headline, typewriter, partículas, CTAs.
-- `components/sections/ServicesSection.tsx`: grid de serviços com ícones lucide.
-- `components/sections/PortfolioSection.tsx`: cards e modal de detalhes.
-- `components/sections/ProcessSection.tsx`: timeline, antes/depois.
-- `components/sections/TestimonialsSection.tsx`: marquee de depoimentos.
-- `components/sections/AboutSection.tsx`: cards da equipe.
-- `components/sections/ContactSection.tsx`: formulário que abre WhatsApp.
+- `components/sections/HeroSection.tsx`: hero claro em duas colunas, CTAs e imagem.
+- `components/sections/ServicesSection.tsx`: bento/grid de servicos com imagens e video.
+- `components/sections/PortfolioSection.tsx`: processo e portfolio com cards/chips.
+- `components/sections/CtaSection.tsx`: CTA final para WhatsApp.
 
 ## UI compartilhada
 
-- `components/ui/AnimateOnScroll.tsx`: wrapper de motion para fade e stagger.
-- `components/ui/ParticleBackground.tsx`: tsParticles desktop/mobile.
 - `components/ui/SmoothScroll.tsx`: Lenis.
-- `components/ui/SectionDivider.tsx`: divisores entre seções.
-- `components/ui/ProcessLine.tsx`: linha animada do processo.
-- `components/ui/WhatsAppFab.tsx`: botão flutuante do WhatsApp.
-- `components/ui/ScrollAnimator.tsx` e `components/ui/ScrollAnimations.tsx`: conferir se ainda são usados antes de refatorar.
+- `components/ui/WhatsAppFab.tsx`: botao flutuante do WhatsApp.
+- `components/ui/AnimateOnScroll.tsx`, `ScrollAnimator.tsx`, `ScrollAnimations.tsx`, `ProcessLine.tsx`: utilitarios legados ou compartilhados; conferir uso antes de remover.
 
-## Arquivos de planejamento soltos
+## Observacao importante
 
-- `animacoes.txt`
-- `instrucoes.txt`
-- `instrucoes de como subir na vps.txt`
-- `próximos passos.txt`
-- `stackn8n portainer.txt`
-
-Esses arquivos parecem conter contexto operacional antigo ou paralelo. Vale consolidar aos poucos no Obsidian.
+Nao existe requisito atual para particulas, typewriter ou dark theme. Se algum arquivo antigo citar isso, deve ser tratado como desatualizado.

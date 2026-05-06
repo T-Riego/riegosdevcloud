@@ -27,7 +27,7 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
     // T-02-01: Validate stored value — any unexpected value is silently ignored, falls back to PT-BR
     const stored = localStorage.getItem('locale') as Locale | null
     if (stored === 'pt-BR' || stored === 'en') {
-      setLocale(stored)
+      queueMicrotask(() => setLocale(stored))
     }
   }, [])
 

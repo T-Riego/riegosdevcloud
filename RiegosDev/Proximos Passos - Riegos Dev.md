@@ -8,6 +8,10 @@ Atualizado em: 2026-05-05
 - [x] Refatorar Hero, Services, Portfolio e Footer para o novo design minimalista.
 - [x] Corrigir conflitos de Tailwind V4 no layout responsivo (resolvido bug de quebra de grid/texto).
 - [x] Trocar imagens de placeholders do Stitch por imagens/prints reais dos cases.
+- [x] Criar ponto de restauração `restore-before-light-redesign`.
+- [x] Remover instruções antigas de dark theme/partículas da documentação principal.
+- [x] Remover dependências antigas de partículas/typewriter/tema dark não usadas.
+- [x] Converter card escuro restante de Sites / Landing Pages para light theme.
 
 ## Documentação
 
@@ -47,3 +51,10 @@ Atualizado em: 2026-05-05
 - **Portfólio:** Todos os cases substituídos por imagens reais (ConectaSeguro, ConectaSaúde, AtualEPI) com novo design de "Chips" para as descrições.
 - **Novos Serviços:** O serviço de "Captação de Clientes" foi substituído por "Vídeos & Roteiros de Alta Conversão", incluindo um vídeo em reprodução automática na interface.
 - **Pipeline:** Commits e deploys para a VPS automatizados via GitHub Actions finalizados e testados com sucesso.
+
+## Log de Atualizações - 06/05/2026
+- **Restauração:** Criada a tag `restore-before-light-redesign` antes da limpeza do redesign.
+- **Documentação:** CLAUDE, PRD e notas Obsidian principais atualizadas para light theme sem partículas.
+- **Dependências:** Removidas libs não usadas de partículas, typewriter e tema dark.
+- **Serviços:** Card de Sites / Landing Pages convertido para visual claro/ciano.
+- **Skills:** Skill global `caveman` instalada em `C:\Users\tiago\.codex\skills\caveman`.

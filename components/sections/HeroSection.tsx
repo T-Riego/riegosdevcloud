@@ -1,10 +1,4 @@
-'use client'
-
-import { useLocale } from '@/context/LocaleContext'
-
 export function HeroSection() {
-  const { content } = useLocale()
-
   return (
     <section className="pt-32 pb-20 md:pt-48 md:pb-32 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
