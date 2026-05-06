@@ -1,6 +1,18 @@
 # Próximos Passos - Riegos Dev
 
-Atualizado em: 2026-05-05
+Atualizado em: 2026-05-06
+
+## Status Atual - Redesign RiegosDev
+
+- [x] Redesign estilo referencia implementado e mergeado localmente em `master`.
+- [x] CTA principal alterado para diagnostico gratuito.
+- [x] Hero, servicos, processo, projetos, diagnostico, CTA final e footer atualizados.
+- [x] Conteudo PT-BR e EN mantidos com paridade.
+- [x] Verificacao registrada: `npm run lint` com 0 erros/4 warnings existentes; `npm run build` passou.
+- [ ] Tiago revisar visual final no navegador.
+- [ ] Decidir integracao externa: push direto, PR ou deploy.
+- [ ] Limpar worktrees temporarios `.claude/worktrees/agent-*` somente com autorizacao.
+- [ ] Decidir se `NagoaDev Textos Site.pdf` deve entrar no Git ou ficar local.
 
 ## Design & Layout (Stitch Visual Refresh)
 
@@ -60,3 +72,16 @@ Atualizado em: 2026-05-05
 - **Serviços:** Card de Sites / Landing Pages convertido para visual claro/ciano.
 - **Skills:** Skill global `caveman` instalada em `C:\Users\tiago\.codex\skills\caveman`.
 - **Retomada:** Criada nota para reiniciar Codex e continuar do mesmo ponto usando `caveman`.
+
+## Log de Atualizacoes - Redesign RiegosDev - 06/05/2026
+
+- **Redesign RiegosDev:** Implementado e mergeado localmente em `master` com diagnostico gratuito como CTA principal.
+- **Verificacao:** `npm run lint` sem erros e `npm run build` aprovado.
+- **Pendente:** revisar visual, decidir push/PR/deploy e limpar worktrees temporarios apenas com autorizacao.
+
+## Modelo Codex Recomendado
+
+- Planejamento, revisao critica, merge/deploy: usar `GPT-5.4` ou superior.
+- Execucao de checklist ja aprovado: pode usar modelo menor/barato para economizar tokens.
+- Bugs visuais, conflitos, CI, refatoracao em varios arquivos: voltar para `GPT-5.4`.
+- Regra simples: modelo forte para decidir; modelo barato para executar tarefas mecanicas; modelo forte para revisar antes de publicar.

@@ -2,6 +2,15 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
+## Current Status
+
+- Plan executed on 2026-05-06.
+- Implementation merged locally into `master` via `afc52d8`.
+- Current observed commit: `882f0e7`.
+- Verification recorded: `npm run lint` exited with 0 errors and 4 existing warnings; `npm run build` passed.
+- Do not continue implementing from unchecked task boxes below unless Tiago explicitly asks. Treat the task list as historical execution plan.
+- Remaining choices: visual review, push/PR/deploy, optional cleanup of temporary `.claude/worktrees/agent-*`.
+
 **Goal:** Update the RiegosDev landing page to follow the approved NagoaDev-style structure, copy, and free-diagnostic CTA strategy.
 
 **Architecture:** Keep the existing Next.js App Router single-page landing. Centralize visible copy in `lib/content/pt-BR.ts` and `lib/content/en.ts`, then update section components to consume `useLocale()` where user-facing copy changes. Add a dedicated diagnostic section between projects and final CTA.

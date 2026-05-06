@@ -2,6 +2,22 @@
 
 Data: 2026-05-06
 
+## Status de Execucao
+
+- Implementacao concluida em 2026-05-06.
+- Redesign integrado localmente em `master` pelo merge `afc52d8`.
+- Commit atual observado: `882f0e7`.
+- `master` esta `ahead 19` de `origin/master`.
+- Verificacao registrada: `npm run lint` com 0 erros/4 warnings existentes; `npm run build` passou.
+- Pendente antes de publicar: revisao visual final, decisao de push/PR/deploy e limpeza dos worktrees temporarios se o usuario autorizar.
+
+## Instrucao de Continuidade
+
+- Nao alterar codigo sem autorizacao explicita do usuario.
+- Usar `/caveman ultra` quando o objetivo for economizar tokens.
+- Antes de nova mudanca, confirmar se o alvo e ajuste visual, push/PR, deploy, limpeza de worktrees ou documentacao.
+- Se for mexer no app, rodar no final `npm run lint` e `npm run build`.
+
 ## Objetivo
 
 Reformular a landing da RiegosDev seguindo o padrão do documento `NagoaDev Textos Site.pdf`: linguagem simples, intenção clara, baixo esforço cognitivo e benefício antes do nome técnico do serviço.

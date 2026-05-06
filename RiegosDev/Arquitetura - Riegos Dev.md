@@ -21,6 +21,7 @@ Aplicacao Next.js App Router com uma rota principal em `app/page.tsx`. A pagina 
 - `HeroSection`
 - `ServicesSection`
 - `PortfolioSection`
+- `DiagnosticSection`
 - `CtaSection`
 - `Footer`
 - `WhatsAppFab`
@@ -55,6 +56,7 @@ Secoes ativas:
 - `HeroSection`
 - `ServicesSection`
 - `PortfolioSection`
+- `DiagnosticSection`
 - `CtaSection`
 
 UI compartilhada:
@@ -69,7 +71,8 @@ UI compartilhada:
 - Menu mobile com scroll lock no `body`.
 - Toggle PT-BR/EN com persistencia.
 - Hero claro em duas colunas, sem particulas.
-- Contato e CTAs abrem `wa.me`.
+- Diagnostico gratuito como CTA principal.
+- Contato e CTAs abrem `wa.me` com mensagem alinhada ao idioma.
 
 ## SEO
 
