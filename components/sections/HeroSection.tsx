@@ -4,7 +4,7 @@ import { useLocale } from '@/context/LocaleContext'
 
 export function HeroSection() {
   const { content } = useLocale()
-  const diagnosticWhatsAppHref = 'https://wa.me/5531988969661?text=Ol%C3%A1%2C+vim+pelo+site+e+quero+agendar+um+diagn%C3%B3stico+gratuito.'
+  const diagnosticWhatsAppHref = `https://wa.me/${content.contact.whatsappNumber.replace(/\D/g, '')}?text=${encodeURIComponent(content.contact.whatsappMessage)}`
 
   return (
     <section className="box-border w-full max-w-full pt-32 pb-20 md:pt-48 md:pb-32 px-6">

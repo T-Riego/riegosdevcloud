@@ -3,10 +3,9 @@
 import { CheckCircle2 } from 'lucide-react'
 import { useLocale } from '@/context/LocaleContext'
 
-const diagnosticWhatsAppHref = 'https://wa.me/5531988969661?text=Ol%C3%A1%2C+vim+pelo+site+e+quero+agendar+um+diagn%C3%B3stico+gratuito.'
-
 export function DiagnosticSection() {
   const { content } = useLocale()
+  const diagnosticWhatsAppHref = `https://wa.me/${content.contact.whatsappNumber.replace(/\D/g, '')}?text=${encodeURIComponent(content.contact.whatsappMessage)}`
 
   return (
     <section id="diagnostico" className="py-20 px-6 bg-surface-container-lowest">
