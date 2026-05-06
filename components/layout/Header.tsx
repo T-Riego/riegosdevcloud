@@ -5,9 +5,10 @@ import Link from 'next/link'
 import { useLocale } from '@/context/LocaleContext'
 
 export function Header() {
-  const { content, toggleLocale } = useLocale()
+  const { content, toggleLocale, locale } = useLocale()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const diagnosticWhatsAppHref = 'https://wa.me/5531988969661?text=Ol%C3%A1%2C+vim+pelo+site+e+quero+agendar+um+diagn%C3%B3stico+gratuito.'
 
   // Scroll detection
   useEffect(() => {
@@ -59,12 +60,12 @@ export function Header() {
           </button>
           
           <a 
-            href="https://wa.me/5531988969661?text=Ol%C3%A1%2C+vim+pelo+site+e+tenho+interesse+em+seus+servi%C3%A7os."
+            href={diagnosticWhatsAppHref}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:block bg-primary-container text-on-primary-container px-5 py-2 rounded-full font-sans text-sm font-bold active:scale-95 transition-transform accent-gradient"
           >
-            Falar com Especialista
+            {locale === 'pt-BR' ? 'Agendar diagnóstico gratuito' : 'Schedule free diagnosis'}
           </a>
 
           {/* Mobile Menu Button */}

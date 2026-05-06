@@ -1,4 +1,11 @@
+'use client'
+
+import { useLocale } from '@/context/LocaleContext'
+
 export function HeroSection() {
+  const { content } = useLocale()
+  const diagnosticWhatsAppHref = 'https://wa.me/5531988969661?text=Ol%C3%A1%2C+vim+pelo+site+e+quero+agendar+um+diagn%C3%B3stico+gratuito.'
+
   return (
     <section className="pt-32 pb-20 md:pt-48 md:pb-32 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -7,27 +14,27 @@ export function HeroSection() {
             <span className="material-symbols-outlined text-[18px]">verified</span>
             <span className="text-label-sm">Especialistas em Automação IA</span>
           </div>
-          <h1 className="font-h1 text-h1 text-on-background max-w-xl">
-            Transformamos atendimento em <span className="text-primary">máquina de captação</span> de clientes
+          <h1 className="font-h1 text-h1 text-on-background max-w-2xl">
+            {content.hero.headline}
           </h1>
-          <p className="font-body-lg text-body-lg text-secondary max-w-lg">
-            Não é só automação. É crescimento previsível: Atendimentos para Whatsapp, redução de trabalho manual, sem falhas.
+          <p className="font-body-lg text-body-lg text-secondary max-w-xl">
+            {content.hero.subheadline}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <a 
-              href="https://wa.me/5531988969661?text=Ol%C3%A1%2C+vim+pelo+site+e+tenho+interesse+em+seus+servi%C3%A7os."
+              href={diagnosticWhatsAppHref}
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 accent-gradient text-white rounded-xl font-bold flex items-center justify-center gap-2 active:scale-95 transition-transform"
             >
-              Começar Agora
+              {content.hero.ctaPrimary}
               <span className="material-symbols-outlined">arrow_forward</span>
             </a>
             <a 
               href="#portfolio"
               className="px-8 py-4 bg-white border border-outline-variant text-on-background rounded-xl font-semibold hover:bg-surface-container-low transition-colors active:scale-95 flex items-center justify-center text-center"
             >
-              Ver Case Studies
+              {content.hero.ctaSecondary}
             </a>
           </div>
         </div>
