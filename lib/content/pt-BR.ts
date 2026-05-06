@@ -4,7 +4,7 @@
 
 export const ptBR = {
   nav: {
-    logo: 'Riegos Dev',
+    logo: 'RiegosDev',
     links: {
       sobre: 'Sobre',
       servicos: 'O que fazemos',
@@ -81,7 +81,7 @@ export const ptBR = {
   },
   portfolio: {
     sectionTitle: 'Portfólio',
-    headline: 'Projetos que entregaram resultado',
+    headline: 'Projetos que já entregamos',
     viewDetails: 'Ver detalhes',
     close: 'Fechar',
     technologies: 'Tecnologias',

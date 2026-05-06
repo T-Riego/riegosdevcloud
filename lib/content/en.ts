@@ -6,7 +6,7 @@ import type { SiteContent } from './pt-BR'
 
 export const en: SiteContent = {
   nav: {
-    logo: 'Riegos Dev',
+    logo: 'RiegosDev',
     links: {
       sobre: 'About',
       servicos: 'What we do',
@@ -83,7 +83,7 @@ export const en: SiteContent = {
   },
   portfolio: {
     sectionTitle: 'Portfolio',
-    headline: 'Projects that delivered results',
+    headline: 'Projects we delivered',
     viewDetails: 'View details',
     close: 'Close',
     technologies: 'Technologies',
