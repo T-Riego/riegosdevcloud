@@ -12,6 +12,7 @@ Atualizado em: 2026-05-05
 - [x] Remover instruções antigas de dark theme/partículas da documentação principal.
 - [x] Remover dependências antigas de partículas/typewriter/tema dark não usadas.
 - [x] Converter card escuro restante de Sites / Landing Pages para light theme.
+- [x] Criar nota de retomada `Retomada Codex - Riegos Dev.md`.
 
 ## Documentação
 
@@ -58,3 +59,4 @@ Atualizado em: 2026-05-05
 - **Dependências:** Removidas libs não usadas de partículas, typewriter e tema dark.
 - **Serviços:** Card de Sites / Landing Pages convertido para visual claro/ciano.
 - **Skills:** Skill global `caveman` instalada em `C:\Users\tiago\.codex\skills\caveman`.
+- **Retomada:** Criada nota para reiniciar Codex e continuar do mesmo ponto usando `caveman`.
