@@ -24,7 +24,9 @@ export function ServicesSection() {
           {content.services.items.map((item) => {
             const media = mediaById[item.id as keyof typeof mediaById]
 
-            if (!media) return null
+            if (!media) {
+              throw new Error(`Unsupported service media id: ${item.id}`)
+            }
 
             return (
               <article key={item.id} className="bg-white rounded-3xl border border-outline-variant/30 soft-card-shadow overflow-hidden flex flex-col">
@@ -34,7 +36,7 @@ export function ServicesSection() {
                 </div>
                 <div className="mt-auto bg-surface-container-lowest">
                   {media.type === 'video' ? (
-                    <video autoPlay loop muted playsInline className="w-full aspect-video object-cover" src={media.src} />
+                    <video aria-label={media.alt} autoPlay loop muted playsInline className="w-full aspect-video object-cover" src={media.src} />
                   ) : (
                     <img alt={media.alt} className="w-full aspect-video object-cover" src={media.src} />
                   )}
