@@ -7,7 +7,7 @@ Atualizado em: 2026-05-05
 - [x] Aplicar nova paleta de cores light e remover tema dark.
 - [x] Refatorar Hero, Services, Portfolio e Footer para o novo design minimalista.
 - [x] Corrigir conflitos de Tailwind V4 no layout responsivo (resolvido bug de quebra de grid/texto).
-- [ ] Trocar imagens de placeholders do Stitch por imagens/prints reais dos cases.
+- [x] Trocar imagens de placeholders do Stitch por imagens/prints reais dos cases.
 
 ## Documentação
 
@@ -38,3 +38,12 @@ Atualizado em: 2026-05-05
 - [ ] Adicionar imagem Open Graph real.
 - [ ] Validar metadados em PT-BR e EN.
 - [ ] Definir estratégia de deploy: Vercel, VPS ou outro ambiente.
+
+---
+
+## Log de Atualizações - 05/05/2026
+- **Bento Grid (Serviços):** Imagens padronizadas e responsivas adicionadas (Atendimento 24/7 e Automação Inteligente).
+- **Navegação (Header):** Corrigido o direcionamento da âncora do Portfólio e adicionado o botão "Processo".
+- **Portfólio:** Todos os cases substituídos por imagens reais (ConectaSeguro, ConectaSaúde, AtualEPI) com novo design de "Chips" para as descrições.
+- **Novos Serviços:** O serviço de "Captação de Clientes" foi substituído por "Vídeos & Roteiros de Alta Conversão", incluindo um vídeo em reprodução automática na interface.
+- **Pipeline:** Commits e deploys para a VPS automatizados via GitHub Actions finalizados e testados com sucesso.
