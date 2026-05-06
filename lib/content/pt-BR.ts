@@ -27,6 +27,7 @@ export const ptBR = {
     socialHeading: 'Social',
   },
   hero: {
+    badge: 'Especialistas em Automação IA',
     headline: 'Seu negócio respondendo clientes, tirando dúvidas e fechando vendas — mesmo quando você não está.',
     subheadline: 'A gente configura uma IA que fala pela sua empresa. Com a linguagem certa, na hora certa, sem aumentar sua equipe.',
     typewriterItems: [
@@ -214,7 +215,7 @@ export const ptBR = {
     },
     whatsappLabel: 'Falar pelo WhatsApp',
     whatsappNumber: '+55 31 98896-9661',
-    whatsappMessage: 'Olá, vim pelo site e tenho interesse em seus serviços.',
+    whatsappMessage: 'Olá, vim pelo site e quero agendar um diagnóstico gratuito.',
   },
 } as const
 

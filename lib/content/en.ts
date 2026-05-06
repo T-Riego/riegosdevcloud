@@ -29,6 +29,7 @@ export const en: SiteContent = {
     socialHeading: 'Social',
   },
   hero: {
+    badge: 'AI Automation Specialists',
     headline: 'Your business answering customers, clearing doubts, and closing sales — even when you are not there.',
     subheadline: 'We configure an AI that speaks for your company. With the right language, at the right time, without growing your team.',
     typewriterItems: [
@@ -216,6 +217,6 @@ export const en: SiteContent = {
     },
     whatsappLabel: 'Chat on WhatsApp',
     whatsappNumber: '+55 31 98896-9661',
-    whatsappMessage: 'Hello, I came from your website and I am interested in your services.',
+    whatsappMessage: 'Hello, I came from your website and want to schedule a free diagnosis.',
   },
 } as const

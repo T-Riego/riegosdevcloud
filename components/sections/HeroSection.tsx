@@ -12,7 +12,7 @@ export function HeroSection() {
         <div className="min-w-0 w-full max-w-full space-y-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container rounded-full text-on-secondary-container">
             <span className="material-symbols-outlined text-[18px]">verified</span>
-            <span className="text-label-sm">Especialistas em Automação IA</span>
+            <span className="text-label-sm">{content.hero.badge}</span>
           </div>
           <h1 className="font-h1 text-[36px] leading-[1.12] md:text-h1 text-on-background max-w-full md:max-w-2xl text-balance break-words">
             {content.hero.headline}
