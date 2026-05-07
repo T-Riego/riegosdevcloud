@@ -38,7 +38,15 @@ export function ServicesSection() {
                 </div>
                 <div className="mt-auto bg-surface-container-lowest">
                   {media.type === 'video' ? (
-                    <video aria-label={media.alt} autoPlay loop muted playsInline className="w-full aspect-video object-cover" src={media.src} />
+                    <video
+                      aria-label={media.alt}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full aspect-video object-cover object-[50%_30%]"
+                      src={media.src}
+                    />
                   ) : (
                     <img alt={media.alt} className="w-full aspect-video object-cover" src={media.src} />
                   )}
