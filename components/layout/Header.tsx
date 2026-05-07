@@ -80,7 +80,6 @@ export function Header() {
           </button>
         </div>
       </div>
-
       {/* Mobile Menu Overlay */}
       {menuOpen && (
         <div className="md:hidden fixed inset-0 top-16 z-40 bg-white/95 backdrop-blur-md flex flex-col items-center justify-start pt-8 gap-6 border-t border-slate-200/50">

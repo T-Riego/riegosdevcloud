@@ -7,14 +7,14 @@ export function HeroSection() {
   const diagnosticWhatsAppHref = `https://wa.me/${content.contact.whatsappNumber.replace(/\D/g, '')}?text=${encodeURIComponent(content.contact.whatsappMessage)}`
 
   return (
-    <section className="box-border w-full max-w-full pt-32 pb-20 md:pt-48 md:pb-32 px-6">
-      <div className="max-w-7xl w-full max-w-full mx-auto grid min-w-0 grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="box-border w-full max-w-full overflow-x-clip pt-32 pb-20 md:pt-48 md:pb-32 px-6">
+      <div className="box-border max-w-7xl w-full max-w-full mx-auto grid min-w-0 grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="min-w-0 w-full max-w-full space-y-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container rounded-full text-on-secondary-container">
             <span className="material-symbols-outlined text-[18px]">verified</span>
             <span className="text-label-sm">{content.hero.badge}</span>
           </div>
-          <h1 className="font-h1 text-[36px] leading-[1.12] md:text-h1 text-on-background max-w-full md:max-w-2xl text-balance break-words">
+          <h1 className="font-h1 text-h1 text-on-background max-w-full md:max-w-2xl break-words [text-wrap:pretty] md:[text-wrap:balance]">
             {content.hero.headline}
           </h1>
           <p className="font-body-lg text-body-lg text-secondary max-w-full md:max-w-xl break-words">
@@ -38,7 +38,7 @@ export function HeroSection() {
             </a>
           </div>
         </div>
-        <div className="relative">
+        <div className="relative min-w-0 w-full">
           <div className="absolute -z-10 inset-0 bg-primary-fixed blur-3xl opacity-20 rounded-full"></div>
           <div className="relative rounded-[32px] overflow-hidden border border-white soft-card-shadow">
             <img 

@@ -1,18 +1,29 @@
 # Próximos Passos - Riegos Dev
 
-Atualizado em: 2026-05-06
+Atualizado em: 2026-05-07
 
 ## Status Atual - Redesign RiegosDev
 
-- [x] Redesign estilo referencia implementado e mergeado localmente em `master`.
+- [x] Redesign estilo referencia implementado, mergeado em `master` e publicado em `origin/master`.
 - [x] CTA principal alterado para diagnostico gratuito.
 - [x] Hero, servicos, processo, projetos, diagnostico, CTA final e footer atualizados.
 - [x] Conteudo PT-BR e EN mantidos com paridade.
 - [x] Verificacao registrada: `npm run lint` com 0 erros/4 warnings existentes; `npm run build` passou.
-- [ ] Tiago revisar visual final no navegador.
-- [ ] Decidir integracao externa: push direto, PR ou deploy.
+- [ ] Validar novamente o visual mobile apos o ajuste de overflow dos headings.
+- [ ] Decidir apenas o deploy/publicacao final do site, se ainda estiver pendente fora do Git.
 - [ ] Limpar worktrees temporarios `.claude/worktrees/agent-*` somente com autorizacao.
 - [ ] Decidir se `NagoaDev Textos Site.pdf` deve entrar no Git ou ficar local.
+
+## Amanhã - Pesquisa de Novos Exemplos de Portfólio
+
+- [ ] Fazer pesquisa web de nichos vendaveis para videos de divulgacao e landing pages.
+- [ ] Escolher 4 exemplos de videos, excluindo bijuteria.
+- [ ] Escolher 4 exemplos de landing pages, excluindo EPI e protecao veicular.
+- [ ] Para cada video: nicho, publico, oferta, gancho de 2s, roteiro de 20-35s, cenas/imagens, texto na tela, CTA e motivo comercial.
+- [ ] Para cada landing page: nicho, objetivo, headline, estrutura, CTAs, imagens, objecoes, provas de confianca e motivo comercial.
+- [ ] Gerar ranking do mais vendavel para o menos vendavel.
+- [ ] Indicar quais exemplos servem melhor para site, Reels/Instagram e clientes de maior ticket.
+- [ ] Avaliar tudo pela satisfacao do cliente comprador e capacidade real de vender, nao por gosto pessoal.
 
 ## Design & Layout (Stitch Visual Refresh)
 

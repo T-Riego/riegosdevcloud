@@ -6,7 +6,7 @@
 
 - Plan executed on 2026-05-06.
 - Implementation merged locally into `master` via `afc52d8`.
-- Current observed commit: `882f0e7`.
+- Current observed commit on 2026-05-07: `e1d3522`.
 - Verification recorded: `npm run lint` exited with 0 errors and 4 existing warnings; `npm run build` passed.
 - Do not continue implementing from unchecked task boxes below unless Tiago explicitly asks. Treat the task list as historical execution plan.
 - Remaining choices: visual review, push/PR/deploy, optional cleanup of temporary `.claude/worktrees/agent-*`.

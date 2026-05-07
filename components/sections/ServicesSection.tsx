@@ -12,13 +12,15 @@ export function ServicesSection() {
   const { content } = useLocale()
 
   return (
-    <section id="servicos" className="py-20 bg-surface-container-lowest">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="servicos" className="box-border w-full max-w-full overflow-x-clip py-20 bg-surface-container-lowest">
+      <div className="box-border max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 space-y-4">
           <span className="text-primary font-bold uppercase tracking-widest text-xs">
             {content.services.sectionTitle}
           </span>
-          <h2 className="font-h2 text-h2 text-on-background">{content.services.headline}</h2>
+          <h2 className="font-h2 text-h2 text-on-background break-words [text-wrap:pretty]">
+            {content.services.headline}
+          </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {content.services.items.map((item) => {

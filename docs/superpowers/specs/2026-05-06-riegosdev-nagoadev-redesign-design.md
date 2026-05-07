@@ -5,11 +5,11 @@ Data: 2026-05-06
 ## Status de Execucao
 
 - Implementacao concluida em 2026-05-06.
-- Redesign integrado localmente em `master` pelo merge `afc52d8`.
-- Commit atual observado: `882f0e7`.
-- `master` esta `ahead 19` de `origin/master`.
+- Redesign integrado em `master` pelo merge `afc52d8` e publicado em `origin/master`.
+- Commit atual observado em 2026-05-07: `e1d3522`.
+- `master` esta sincronizado com `origin/master` (`0 ahead / 0 behind`).
 - Verificacao registrada: `npm run lint` com 0 erros/4 warnings existentes; `npm run build` passou.
-- Pendente antes de publicar: revisao visual final, decisao de push/PR/deploy e limpeza dos worktrees temporarios se o usuario autorizar.
+- Pendente apos publicar: revisao visual final, decisao de deploy final e limpeza dos worktrees temporarios se o usuario autorizar.
 
 ## Instrucao de Continuidade
 

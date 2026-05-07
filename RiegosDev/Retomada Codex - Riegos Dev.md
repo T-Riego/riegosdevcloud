@@ -1,13 +1,13 @@
 # Retomada Codex - Riegos Dev
 
-Atualizado em: 2026-05-06
+Atualizado em: 2026-05-07
 
 ## Estado Atual Pos-Redesign
 
 - Branch atual: `master`
-- Estado Git local: `master...origin/master [ahead 19]`
-- Redesign RiegosDev ja integrado localmente em `master` pelo merge `afc52d8`.
-- Commit atual observado: `882f0e7` (`chore: ignore local worktrees in lint`)
+- Estado Git local: `master...origin/master` sincronizado (`0 ahead / 0 behind`)
+- Redesign RiegosDev ja integrado em `master` pelo merge `afc52d8` e publicado em `origin/master`.
+- Commit atual observado: `e1d3522` (`docs: document riegosdev redesign handoff`)
 - Arquivo nao rastreado esperado: `NagoaDev Textos Site.pdf`
 - Worktree principal do redesign `.worktrees/riegos-redesign` nao existe mais.
 - Ainda existem worktrees temporarios em `.claude/worktrees/agent-*`; nao limpar sem autorizacao.
@@ -43,22 +43,46 @@ Atualizado em: 2026-05-06
 - `a5d9d81` `fix: localize diagnostic whatsapp ctas`
 - `afc52d8` `Merge branch 'riegos-redesign'`
 - `882f0e7` `chore: ignore local worktrees in lint`
+- `e1d3522` `docs: document riegosdev redesign handoff`
 
 ## Verificacao Pos-Redesign
 
 - `npm run lint`: 0 erros, 4 warnings existentes.
 - `npm run build`: passou.
-- Review final: aprovado.
+- Review final: pendente apenas de nova checagem visual mobile apos ajuste de overflow em 2026-05-07.
 
 ## Continuar Daqui
 
 Nao alterar codigo sem autorizacao explicita do Tiago.
 
+## Tarefa Para Amanhã - Pesquisa de Portfólio
+
+Objetivo: fazer pesquisa web caprichada para escolher novos exemplos vendaveis para o portfólio da RiegosDev.
+
+Escopo:
+
+- 4 exemplos de videos de divulgacao, alem de bijuteria.
+- 4 exemplos de landing pages.
+- Nao incluir EPI.
+- Nao incluir associacao/protecao veicular.
+- Priorizar nichos com demanda real, alto apelo visual, potencial de leads e boa percepcao de valor pelo cliente.
+
+Entregar:
+
+- ranking dos nichos mais vendaveis;
+- justificativa comercial de cada nicho;
+- roteiro de 20 a 35 segundos para cada video;
+- sugestao de cenas, imagens, texto na tela, estilo visual e CTA;
+- estrutura completa de cada landing page;
+- recomendacao do que entra melhor no site, Instagram/Reels e portfolio.
+
+Observacao importante: avaliar pela satisfacao do cliente comprador e pelo potencial de venda, nao pelo gosto pessoal. Video precisa prender atencao rapido e parecer util para empresa real.
+
 Mensagem curta para retomada:
 
 ```text
 /caveman ultra
-Continuar RiegosDev. Nao alterar codigo sem minha autorizacao. Estado: master ahead 19, redesign ja mergeado localmente, falta revisar visual/push/deploy/limpeza. Ler RiegosDev/Retomada Codex - Riegos Dev.md antes.
+Continuar RiegosDev. Nao alterar codigo sem minha autorizacao. Estado: master sincronizado com origin/master, redesign ja publicado, falta revisar visual mobile/deploy final/limpeza. Ler RiegosDev/Retomada Codex - Riegos Dev.md antes.
 ```
 
 ## Modelo Recomendado
@@ -68,13 +92,13 @@ Continuar RiegosDev. Nao alterar codigo sem minha autorizacao. Estado: master ah
 - Bugs visuais, conflitos, CI, merge/deploy e revisao final: preferir `GPT-5.4` ou superior.
 - Plano grande ou decisao arquitetural: usar modelo mais forte primeiro; depois executar barato; revisar forte antes de publicar.
 
-## Estado salvo
+## Estado salvo em 2026-05-06
 
 - Branch: `master`
 - Base remota antes do trabalho: `origin/master` em `153714d`
 - Checkpoint/restauracao: tag `restore-before-light-redesign` em `88f2cb5`
 - Commit atual de limpeza/design-base: `743b627`
-- Repositorio ficou `ahead 2` de `origin/master`
+- Repositorio ficou `ahead 2` de `origin/master` naquele momento; em 2026-05-07 o estado atual ja esta sincronizado.
 
 ## O que foi feito
 
