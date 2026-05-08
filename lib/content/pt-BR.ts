@@ -23,6 +23,11 @@ export const ptBR = {
       whatsapp: 'WhatsApp',
       linkedin: 'LinkedIn',
     },
+    legal: {
+      privacy: 'Privacidade',
+      terms: 'Termos',
+      dataDeletion: 'Exclusão de dados',
+    },
     quickLinks: 'Links rápidos',
     socialHeading: 'Social',
   },

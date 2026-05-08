@@ -2,6 +2,7 @@
 
 // components/layout/Footer.tsx
 
+import Link from 'next/link'
 import { useLocale } from '@/context/LocaleContext'
 
 export function Footer() {
@@ -21,6 +22,20 @@ export function Footer() {
       label: content.footer.social.linkedin,
     },
   ]
+  const legalLinks = [
+    {
+      href: '/privacidade',
+      label: content.footer.legal.privacy,
+    },
+    {
+      href: '/termos',
+      label: content.footer.legal.terms,
+    },
+    {
+      href: '/exclusao-de-dados',
+      label: content.footer.legal.dataDeletion,
+    },
+  ]
 
   return (
     <footer className="w-full py-12 border-t border-slate-200 bg-slate-50">
@@ -32,18 +47,31 @@ export function Footer() {
             &copy; {year} RiegosDev. {content.footer.copyright}
           </p>
         </div>
-        <div className="flex gap-8">
-          {socialLinks.map((link) => (
-            <a
-              key={link.href}
-              className="font-sans text-xs uppercase tracking-widest text-slate-500 hover:text-cyan-500 transition-colors"
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {link.label}
-            </a>
-          ))}
+        <div className="flex flex-col items-center gap-4 md:items-end">
+          <div className="flex flex-wrap justify-center gap-6 md:justify-end">
+            {socialLinks.map((link) => (
+              <a
+                key={link.href}
+                className="font-sans text-xs uppercase tracking-widest text-slate-500 hover:text-cyan-500 transition-colors"
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+          <div className="flex flex-wrap justify-center gap-5 md:justify-end">
+            {legalLinks.map((link) => (
+              <Link
+                key={link.href}
+                className="font-sans text-xs font-semibold text-slate-500 hover:text-primary transition-colors"
+                href={link.href}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </footer>

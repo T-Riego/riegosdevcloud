@@ -41,7 +41,7 @@ export function Header() {
             {navLinks.map((link) => (
               <a
                 key={link.key}
-                href={`#${link.key}`}
+                href={`/#${link.key}`}
                 className="text-slate-600 hover:text-slate-900 transition-colors font-sans antialiased text-sm tracking-tight"
               >
                 {link.label}
@@ -87,7 +87,7 @@ export function Header() {
             {navLinks.map((link) => (
               <a
                 key={link.key}
-                href={`#${link.key}`}
+                href={`/#${link.key}`}
                 className="text-lg text-slate-600 font-medium w-full text-center py-2 border-b border-slate-100"
                 onClick={() => setMenuOpen(false)}
               >

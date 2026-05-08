@@ -25,6 +25,11 @@ export const en: SiteContent = {
       whatsapp: 'WhatsApp',
       linkedin: 'LinkedIn',
     },
+    legal: {
+      privacy: 'Privacy',
+      terms: 'Terms',
+      dataDeletion: 'Data deletion',
+    },
     quickLinks: 'Quick links',
     socialHeading: 'Social',
   },

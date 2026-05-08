@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   keywords: ['automação com IA', 'agentes WhatsApp', 'desenvolvimento full stack', 'n8n', 'engenharia de IA', 'Riegos Dev'],
   authors: [{ name: 'Tiago — Riegos Dev' }],
   creator: 'Riegos Dev',
-  metadataBase: new URL('https://riegosdev.com'),
+  metadataBase: new URL('https://riegosdev.cloud'),
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: 'Riegos Dev',
     title: 'Riegos Dev — Automação com IA & Desenvolvimento Full Stack',
     description: 'Automação inteligente, agentes para WhatsApp e desenvolvimento full stack para empresas que querem crescer.',
-    url: 'https://riegosdev.com',
+    url: 'https://riegosdev.cloud',
   },
   twitter: {
     card: 'summary_large_image',
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   },
   alternates: {
     languages: {
-      'pt-BR': 'https://riegosdev.com',
-      'en': 'https://riegosdev.com',
+      'pt-BR': 'https://riegosdev.cloud',
+      'en': 'https://riegosdev.cloud',
     },
   },
 }
