@@ -51,6 +51,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <head>
+        <meta name="facebook-domain-verification" content="1txp2ekkyl8396fc8vuv6gp1aqu76a" />
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
       <body className={`${inter.variable} font-body-md overflow-x-hidden`}>
