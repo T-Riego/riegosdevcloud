@@ -1,16 +1,21 @@
 User-agent: facebookexternalhit
+Disallow:
 Allow: /
 
 User-agent: Facebot
+Disallow:
 Allow: /
 
 User-agent: meta-externalagent
+Disallow:
 Allow: /
 
 User-agent: meta-externalfetcher
+Disallow:
 Allow: /
 
 User-agent: *
+Disallow:
 Allow: /
 
 Sitemap: https://riegosdev.cloud/sitemap.xml
