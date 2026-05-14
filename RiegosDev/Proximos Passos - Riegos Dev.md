@@ -1,6 +1,6 @@
 # Próximos Passos - Riegos Dev
 
-Atualizado em: 2026-05-07
+Atualizado em: 2026-05-14
 
 ## Status Atual - Redesign RiegosDev
 
@@ -9,10 +9,45 @@ Atualizado em: 2026-05-07
 - [x] Hero, servicos, processo, projetos, diagnostico, CTA final e footer atualizados.
 - [x] Conteudo PT-BR e EN mantidos com paridade.
 - [x] Verificacao registrada: `npm run lint` com 0 erros/4 warnings existentes; `npm run build` passou.
-- [ ] Validar novamente o visual mobile apos o ajuste de overflow dos headings.
-- [ ] Decidir apenas o deploy/publicacao final do site, se ainda estiver pendente fora do Git.
+- [x] Deploy final publicado em `https://riegosdev.cloud` via GitHub Actions/VPS.
+- [x] Dominio final atualizado em metadata e sitemap para `https://riegosdev.cloud`.
+- [x] Paginas legais publicadas: `/privacidade`, `/termos` e `/exclusao-de-dados`.
+- [x] Metatag de verificacao da Meta publicada no `<head>` da home.
+- [x] Validar novamente o visual mobile apos o ajuste de overflow dos headings. Confirmado em 360px, 375px, 390px, 414px e 430px sem overflow lateral.
+- [x] Baseline de Microsoft Clarity/tracking implementado e validado localmente.
 - [ ] Limpar worktrees temporarios `.claude/worktrees/agent-*` somente com autorizacao.
 - [ ] Decidir se `NagoaDev Textos Site.pdf` deve entrar no Git ou ficar local.
+
+## Tracking / Microsoft Clarity
+
+- [x] Criar wrapper central de analytics em `lib/analytics.ts`.
+- [x] Criar componente env-gated `ClarityAnalytics`.
+- [x] Montar `<ClarityAnalytics />` no layout raiz.
+- [x] Criar tracker de page view, scroll depth e section view.
+- [x] Instrumentar CTAs principais de WhatsApp.
+- [x] Criar nota Obsidian [[Tracking e Clarity - Riegos Dev]].
+- [x] Registrar Project ID local: `wqzbfoy9h9`.
+- [x] Criar `.env.local` com `NEXT_PUBLIC_CLARITY_PROJECT_ID=wqzbfoy9h9`.
+- [x] Rodar `npm run check:seo` e confirmar `15/15`.
+- [x] Criar GitHub Secret `NEXT_PUBLIC_CLARITY_PROJECT_ID` com valor `wqzbfoy9h9`.
+- [x] Ajustar GitHub Actions para criar `.env.local` na VPS antes do `docker build`.
+- [ ] Fazer deploy apos a variavel estar configurada em producao.
+- [ ] Validar `view-source:https://riegosdev.cloud/` procurando `clarity.ms/tag/wqzbfoy9h9`.
+- [ ] Validar visitas/eventos no painel do Microsoft Clarity.
+- [ ] Decidir se consent banner LGPD entra antes de expandir replay/heatmaps.
+
+## Meta / Tech Provider
+
+- [x] Criar Politica de Privacidade completa em `/privacidade`.
+- [x] Criar Termos de Servico em `/termos`.
+- [x] Criar pagina de Instrucao de Exclusao de Dados em `/exclusao-de-dados`.
+- [x] Incluir links legais no footer.
+- [x] Incluir as paginas legais no sitemap.
+- [x] Atualizar dominio oficial para `riegosdev.cloud`.
+- [x] Publicar metatag `facebook-domain-verification` no `<head>` da home.
+- [x] Confirmar que a metatag aparece em `view-source:https://riegosdev.cloud/`.
+- [ ] Clicar novamente em `Verificar dominio` no Meta Business Suite se o status ainda estiver pendente.
+- [ ] Se a Meta continuar falhando, usar Sharing Debugger para raspar `https://riegosdev.cloud/` novamente e tentar verificar de novo.
 
 ## Amanhã - Pesquisa de Novos Exemplos de Portfólio
 
@@ -62,10 +97,10 @@ Atualizado em: 2026-05-07
 
 ## SEO e deploy
 
-- [ ] Confirmar domínio final antes de manter `https://riegosdev.com` em metadata e sitemap.
+- [x] Confirmar dominio final: `https://riegosdev.cloud`.
 - [ ] Adicionar imagem Open Graph real.
 - [ ] Validar metadados em PT-BR e EN.
-- [ ] Definir estratégia de deploy: Vercel, VPS ou outro ambiente.
+- [x] Estrategia de deploy definida: GitHub Actions via SSH na VPS, com Docker build e update do service `site-oficial_web`.
 
 ---
 
@@ -88,7 +123,23 @@ Atualizado em: 2026-05-07
 
 - **Redesign RiegosDev:** Implementado e mergeado localmente em `master` com diagnostico gratuito como CTA principal.
 - **Verificacao:** `npm run lint` sem erros e `npm run build` aprovado.
-- **Pendente:** revisar visual, decidir push/PR/deploy e limpar worktrees temporarios apenas com autorizacao.
+- **Superado em 08/05:** push/deploy publicados. Ainda pendente: revisar visual, concluir verificacao no Meta Business Suite se necessario e limpar worktrees temporarios apenas com autorizacao.
+
+## Log de Atualizacoes - Meta / Dominio - 08/05/2026
+
+- **Dominio oficial:** `riegosdev.cloud` aplicado em metadata, Open Graph, alternates e sitemap.
+- **Paginas legais:** `/privacidade`, `/termos` e `/exclusao-de-dados` criadas, publicadas e verificadas com HTTP `200`.
+- **Footer:** links legais publicados no rodape.
+- **Meta:** metatag `facebook-domain-verification` adicionada ao `<head>` da home e verificada no HTML publico.
+- **Deploy:** commits `d488788` e `1faa9e8` publicados em `origin/master`; GitHub Actions de deploy na VPS concluiu com sucesso.
+
+## Log de Atualizacoes - Tracking / Clarity - 14/05/2026
+
+- **Microsoft Clarity:** Project ID `wqzbfoy9h9` registrado em `.env.local`.
+- **Tracking:** baseline ja cobre page view, scroll depth, section view e cliques nos CTAs principais de WhatsApp.
+- **Documentacao:** criada nota [[Tracking e Clarity - Riegos Dev]] e atualizadas notas de retomada/mapa/proximos passos.
+- **Verificacao:** `npm run lint`, `npm run check:seo` e `npm run build` passaram em 2026-05-14.
+- **Pendente:** configurar a env var no build da VPS/GitHub Actions e validar o script em producao.
 
 ## Modelo Codex Recomendado
 

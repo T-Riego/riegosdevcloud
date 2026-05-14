@@ -1,16 +1,283 @@
 # Retomada Codex - Riegos Dev
 
-Atualizado em: 2026-05-07
+Atualizado em: 2026-05-14
+
+## Atualizacao Tracking / Microsoft Clarity - 2026-05-14
+
+Contexto: depois de uma queda de luz, o projeto foi revisado para verificar se a implementacao de Microsoft Clarity/tracking tinha ficado quebrada ou incompleta.
+
+### Estado confirmado
+
+- Commit mais recente observado: `04dab4a` (`feat: add free behavior tracking baseline`).
+- Microsoft Clarity foi implementado de forma env-gated.
+- Project ID informado pelo usuario: `wqzbfoy9h9`.
+- `.env.local` criado localmente com:
+
+```txt
+NEXT_PUBLIC_CLARITY_PROJECT_ID=wqzbfoy9h9
+```
+
+- Nota dedicada criada: [[Tracking e Clarity - Riegos Dev]].
+
+### Arquivos de tracking relevantes
+
+- `components/analytics/ClarityAnalytics.tsx`
+- `components/analytics/PageEngagementTracker.tsx`
+- `components/analytics/TrackedWhatsAppLink.tsx`
+- `lib/analytics.ts`
+- `app/layout.tsx`
+- `app/page.tsx`
+- `scripts/check-seo-phase1.mjs`
+
+### Verificacao feita em 2026-05-14
+
+Comandos executados:
+
+```bash
+npm run lint
+npm run check:seo
+npm run build
+```
+
+Resultado:
+
+- `npm run lint`: 0 erros, 4 warnings existentes.
+- `npm run check:seo`: `SEO phase 1 checks passed: 15/15`.
+- `npm run build`: passou com Next.js 16.2.2/Turbopack, TypeScript e paginas estaticas geradas.
+
+Warnings restantes:
+
+- `app/layout.tsx`: Material Symbols carregado via `<head>`.
+- `HeroSection`, `PortfolioSection`, `ServicesSection`: uso de `<img>` em vez de `next/image`.
+
+### Ponto critico para deploy
+
+Para o Clarity aparecer em producao, `NEXT_PUBLIC_CLARITY_PROJECT_ID=wqzbfoy9h9` precisa existir no ambiente usado durante o `docker build` da VPS/GitHub Actions. Se a variavel nao existir nesse momento, o componente retorna `null` e o site continua funcionando, mas sem Clarity.
+
+Atualizacao posterior: o usuario criou a GitHub Secret `NEXT_PUBLIC_CLARITY_PROJECT_ID`, e o workflow `.github/workflows/deploy.yml` foi ajustado para criar `.env.local` em `/opt/riegosdev-site` antes de rodar `docker build`. O Portainer continua gerenciando/mostrando a stack `site-oficial`, mas nao e necessario editar a variavel pela UI do Portainer neste fluxo.
+
+### Regra de memoria daqui pra frente
+
+Ao final de cada melhoria, atualizar:
+
+- esta nota de retomada;
+- `RiegosDev/Proximos Passos - Riegos Dev.md`;
+- `RiegosDev/Mapa do Codigo - Riegos Dev.md`;
+- uma nota especifica do tema quando existir.
+
+Mensagem curta para retomar:
+
+```text
+Retomar RiegosDev pelo bloco "Atualizacao Tracking / Microsoft Clarity - 2026-05-14". Clarity usa project ID wqzbfoy9h9 via NEXT_PUBLIC_CLARITY_PROJECT_ID. Local .env.local criado. Antes de publicar, garantir a env var no build da VPS/GitHub Actions e validar view-source procurando clarity.ms/tag/wqzbfoy9h9.
+```
+
+## Atualizacao Mobile Critico - 2026-05-14
+
+O usuario reportou prioridade critica: no print mobile, textos e botoes apareciam cortados lateralmente. Isso passava sensacao de bug e podia derrubar conversao no primeiro contato.
+
+### Contexto lido
+
+- Obsidian MCP retornou um vault antigo sobre scraper/automacoes, mas o contexto mais relevante do site estava nas notas locais `RiegosDev/`.
+- Notas locais lidas/consideradas:
+  - `CLAUDE.md`
+  - `RiegosDev/Briefing Design Atual - Riegos Dev.md`
+  - `RiegosDev/Mapa do Codigo - Riegos Dev.md`
+  - `RiegosDev/Proximos Passos - Riegos Dev.md`
+  - `RiegosDev/Pesquisa Landing Pages - Riegos Dev.md`
+- Direcao oficial preservada:
+  - tema claro/ciano;
+  - sem dark theme;
+  - sem particulas;
+  - foco em visual premium, moderno, tecnico e conversao.
+
+### Arquivos alterados neste ajuste
+
+- `app/layout.tsx`
+  - Importado `Viewport`.
+  - Adicionado `export const viewport = { width: 'device-width', initialScale: 1 }`.
+- `app/globals.css`
+  - `html, body` agora usam `overflow-x: hidden`.
+  - Adicionada protecao global de largura para `img`, `video`, `canvas`, `svg`, `a` e `button`.
+  - Adicionado `overflow-wrap: anywhere` para `h1`, `h2`, `h3` e `p`.
+  - Headline mobile `text-h1` reduzida de `40px` para `34px`.
+  - `letter-spacing` dos headings ajustado para `0`, conforme regra de design.
+- `components/sections/HeroSection.tsx`
+  - Hero trocado para `overflow-x-hidden`.
+  - Padding mobile reduzido de `px-6` para `px-5`.
+  - `pt` mobile reduzido de `pt-32` para `pt-28`.
+  - CTAs receberam `text-sm sm:text-base`, `leading-tight`, `whitespace-normal`, `min-w-0`, `max-w-full`.
+  - Icone do CTA primario recebeu `shrink-0`.
+- `components/sections/CtaSection.tsx`
+  - Secao recebeu `w-full max-w-full overflow-x-hidden`.
+  - Card final reduziu padding mobile de `p-12` para `p-6`, com `sm:p-10 md:p-20`.
+  - CTA final virou `inline-flex w-full max-w-full` no mobile.
+  - Circulos decorativos absolutos foram contidos dentro do card para nao aumentar `scrollWidth`.
+
+### Verificacao feita
+
+Servidor local usado: `http://127.0.0.1:3000`.
+
+Auditoria via Chrome headless/CDP:
+
+- `360px`: `scrollWidth=360`, overflow `0`, texto/botao fora `0`.
+- `375px`: `scrollWidth=375`, overflow `0`, texto/botao fora `0`.
+- `390px`: `scrollWidth=390`, overflow `0`, texto/botao fora `0`.
+- `414px`: `scrollWidth=414`, overflow `0`, texto/botao fora `0`.
+- `430px`: `scrollWidth=430`, overflow `0`, texto/botao fora `0`.
+
+Comandos executados:
+
+```bash
+npm run lint
+npm run build
+```
+
+Resultado:
+
+- `npm run lint`: 0 erros, 4 warnings existentes.
+- `npm run build`: passou.
+
+Warnings restantes:
+
+- `app/layout.tsx`: fonte Material Symbols carregada via `<head>`.
+- `HeroSection`, `PortfolioSection`, `ServicesSection`: uso de `<img>` em vez de `next/image`.
+
+### Avaliacao critica registrada
+
+Como desenvolvedor: `7.5/10`.
+
+- Pontos fortes: arquitetura simples, Next App Router, componentes claros, conteudo separado, build saudavel.
+- Pontos fracos: imagens nao otimizadas, hero com imagem remota, warnings de performance, encoding quebrado em alguns arquivos/strings no terminal.
+
+Como cliente: `7/10`.
+
+- Proposta clara e CTA de diagnostico gratuito bom.
+- Falta prova mais dura: metricas, depoimentos verificaveis, logos/clientes reais, resultado por projeto.
+
+Como visitante mobile: antes `5/10`, depois do ajuste `7.5/10`.
+
+- O corte lateral foi o problema que mais destruia confianca.
+- Depois do ajuste, a leitura mobile ficou segura.
+- Ainda da para melhorar a conversao com headline mais curta e portfolio mais concreto.
+
+### Proximos passos recomendados
+
+1. Trocar `<img>` por `next/image`, principalmente hero e cards principais.
+2. Usar imagem local/otimizada no hero em vez de URL remota.
+3. Encurtar copy do hero para mobile.
+4. Adicionar provas reais: metricas, prints, depoimentos verificaveis e resultados.
+5. Melhorar portfolio com resultado por projeto.
+6. Corrigir encoding/textos quebrados em PT-BR/EN quando for mexer em copy.
+7. Preencher links reais de Instagram/LinkedIn.
+8. Adicionar imagem Open Graph real.
+
+### Estado Git observado ao salvar
+
+Alteracoes feitas pelo ajuste mobile:
+
+- `app/globals.css`
+- `app/layout.tsx`
+- `components/sections/CtaSection.tsx`
+- `components/sections/HeroSection.tsx`
+
+Alteracoes ja existentes/nao feitas por esta sessao continuam no worktree e nao devem ser revertidas sem autorizacao:
+
+- notas em `RiegosDev/`
+- docs em `docs/superpowers/`
+- `NagoaDev Textos Site.pdf`
+- `hydra.zip`
+- `public/Imagens/Hero section.png`
+
+Mensagem curta para retomar:
+
+```text
+Retomar RiegosDev pelo bloco "Atualizacao Mobile Critico - 2026-05-14" em `RiegosDev/Retomada Codex - Riegos Dev.md`. O bug de corte lateral mobile foi corrigido e verificado em 360/375/390/414/430px. Proximo foco recomendado: decidir se vamos commitar/deployar o ajuste mobile ou melhorar hero/provas/performance antes.
+```
 
 ## Estado Atual Pos-Redesign
 
 - Branch atual: `master`
-- Estado Git local: `master...origin/master` sincronizado (`0 ahead / 0 behind`)
-- Redesign RiegosDev ja integrado em `master` pelo merge `afc52d8` e publicado em `origin/master`.
-- Commit atual observado: `e1d3522` (`docs: document riegosdev redesign handoff`)
-- Arquivo nao rastreado esperado: `NagoaDev Textos Site.pdf`
+- Estado Git local: `master...origin/master` sincronizado apos push e deploy.
+- Redesign RiegosDev ja integrado em `master`, publicado em `origin/master` e implantado na VPS por GitHub Actions.
+- Commit atual observado: `1faa9e8` (`chore: add Meta domain verification tag`)
+- Dominio oficial atual: `https://riegosdev.cloud`.
+- Arquivos nao rastreados observados:
+  - `NagoaDev Textos Site.pdf`
+  - `RiegosDev/Pesquisa Landing Pages - Riegos Dev.md`
+  - `hydra.zip`
+  - `public/Imagens/Hero section.png`
 - Worktree principal do redesign `.worktrees/riegos-redesign` nao existe mais.
 - Ainda existem worktrees temporarios em `.claude/worktrees/agent-*`; nao limpar sem autorizacao.
+
+## Atualizacao Meta / Tech Provider - 2026-05-08
+
+- Criadas e publicadas rotas legais para compliance Meta:
+  - `https://riegosdev.cloud/privacidade`
+  - `https://riegosdev.cloud/termos`
+  - `https://riegosdev.cloud/exclusao-de-dados`
+- Footer publicado com links legais: `Privacidade`, `Termos`, `Exclusao de dados`.
+- `app/sitemap.ts` e `app/layout.tsx` atualizados para usar `https://riegosdev.cloud`.
+- Politica de privacidade inclui uso de dados para automacao, CRM, campanhas, suporte, cobrancas e envio de boletos quando necessario.
+- Politica declara que a RiegosDev nao vende dados e explica revogacao via configuracoes Meta/Facebook e exclusao por `contato@riegosdev.cloud`.
+- Metatag de verificacao de dominio da Meta publicada no `<head>`:
+  - `<meta name="facebook-domain-verification" content="1txp2ekkyl8396fc8vuv6gp1aqu76a" />`
+- Commit das paginas legais: `d488788` (`feat: add legal pages for Meta compliance`).
+- Commit da metatag Meta: `1faa9e8` (`chore: add Meta domain verification tag`).
+- Deploy automatico na VPS pelo GitHub Actions concluiu com sucesso.
+- Verificacao publica feita:
+  - `/privacidade`, `/termos`, `/exclusao-de-dados` e `/sitemap.xml` responderam `200`.
+  - `http://riegosdev.cloud/` e `https://riegosdev.cloud/` exibem a metatag dentro do `<head>`.
+  - Teste com user-agent `facebookexternalhit/1.1` tambem encontrou a metatag.
+- Se a Meta ainda nao verificar, orientar o usuario a tentar novamente, abrir `view-source:https://riegosdev.cloud/` e procurar `facebook-domain-verification`, ou usar o Sharing Debugger para forcar nova extracao.
+
+## Atualizacao Meta / Verificacao de Dominio - 2026-05-11
+
+- Nota separada criada em [[Meta - Verificacao de Dominio e Crawlers]].
+- Registro TXT da Meta confirmado publicamente:
+  - `facebook-domain-verification=1txp2ekkyl8396fc8vuv6gp1aqu76a`
+- `robots.txt` publicado e confirmado com permissao para:
+  - `facebookexternalhit`
+  - `Facebot`
+  - `meta-externalagent`
+  - `meta-externalfetcher`
+- Testes publicos confirmaram `200` para os user agents da Meta simulados.
+- HTML publico contem a metatag `facebook-domain-verification` no `<head>`.
+- Diagnostico atual:
+  - para aprovar dominio, usar metodo DNS TXT no dropdown da Meta;
+  - o erro `403` do Sharing Debugger e um problema separado, provavelmente bloqueio especifico de IP/rede real da Meta na VPS/Hostinger/protecao anti-bot, caso continue aparecendo.
+- Proximo passo se o Sharing Debugger continuar com `403`: rodar os comandos de log salvos na nota separada e verificar se o request da Meta chega na VPS.
+
+## Leia Primeiro Quando Voltar
+
+O usuario pediu para salvar o contexto completo antes de sair e quer ver exatamente esta parte na volta.
+
+Resumo exato da pesquisa de landing pages que ficou pendente de leitura:
+
+- A pesquisa completa foi salva em `RiegosDev/Pesquisa Landing Pages - Riegos Dev.md`.
+- Ranking geral para portfolio:
+  1. `Imobiliario`
+  2. `Moveis planejados`
+  3. `Energia solar`
+  4. `Odontologia`
+  5. `Estetica`
+  6. `Educacao profissional`
+- Ordem recomendada de execucao:
+  1. `Imobiliario`
+  2. `Energia solar`
+  3. `Moveis planejados`
+  4. `Odontologia`
+- Motivo curto:
+  - `Imobiliario` abre o portfolio bonito e com CTA muito forte.
+  - `Solar` prova que a RiegosDev vende ROI, nao so visual.
+  - `Moveis` reforca design + WhatsApp muito bem.
+  - `Odonto` sobe a percepcao de ticket e seriedade.
+- Observacao importante:
+  - `Estetica` e forte, mas mais saturada e mais facil de ficar generica.
+  - `Odonto` precisa de linguagem etica e foco em avaliacao.
+  - `Solar` vende melhor com simulacao real e prova local.
+  - `Imobiliario` funciona melhor com `tabela + simulacao + visita`, nao como LP institucional.
+
+Quando o usuario voltar, mostrar primeiro este bloco e depois abrir a nota completa da pesquisa.
 
 ## Redesign Finalizado
 
@@ -49,11 +316,18 @@ Atualizado em: 2026-05-07
 
 - `npm run lint`: 0 erros, 4 warnings existentes.
 - `npm run build`: passou.
+- Deploy publicado em `https://riegosdev.cloud` via GitHub Actions.
 - Review final: pendente apenas de nova checagem visual mobile apos ajuste de overflow em 2026-05-07.
 
 ## Continuar Daqui
 
 Nao alterar codigo sem autorizacao explicita do Tiago.
+
+Prioridade de retomada quando o usuario voltar:
+
+1. Mostrar o bloco `Leia Primeiro Quando Voltar`.
+2. Abrir a nota `RiegosDev/Pesquisa Landing Pages - Riegos Dev.md`.
+3. Confirmar se quer comecar pela landing `Imobiliario`.
 
 ## Tarefa Para Amanhã - Pesquisa de Portfólio
 
@@ -82,7 +356,7 @@ Mensagem curta para retomada:
 
 ```text
 /caveman ultra
-Continuar RiegosDev. Nao alterar codigo sem minha autorizacao. Estado: master sincronizado com origin/master, redesign ja publicado, falta revisar visual mobile/deploy final/limpeza. Ler RiegosDev/Retomada Codex - Riegos Dev.md antes.
+Continuar RiegosDev. Nao alterar codigo sem minha autorizacao. Estado: master sincronizado com origin/master em 1faa9e8, site publicado em https://riegosdev.cloud, paginas legais e metatag Meta publicadas. Pesquisa de landing pages salva em RiegosDev/Pesquisa Landing Pages - Riegos Dev.md. Ler primeiro RiegosDev/Retomada Codex - Riegos Dev.md e me mostrar o bloco "Leia Primeiro Quando Voltar".
 ```
 
 ## Modelo Recomendado
