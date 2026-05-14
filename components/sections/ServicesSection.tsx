@@ -12,7 +12,7 @@ export function ServicesSection() {
   const { content } = useLocale()
 
   return (
-    <section id="servicos" className="box-border w-full max-w-full overflow-x-clip py-20 bg-surface-container-lowest">
+    <section id="servicos" data-section-id="servicos" className="box-border w-full max-w-full overflow-x-clip py-20 bg-surface-container-lowest">
       <div className="box-border max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 space-y-4">
           <span className="text-primary font-bold uppercase tracking-widest text-xs">

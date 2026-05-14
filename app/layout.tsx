@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { LocaleProvider } from '@/context/LocaleContext'
 import { defaultOgImage, siteDescription, siteName, siteTitle, siteUrl } from '@/lib/seo'
+import { ClarityAnalytics } from '@/components/analytics/ClarityAnalytics'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -69,6 +70,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
       </head>
       <body className={`${inter.variable} font-body-md overflow-x-hidden`}>
+        <ClarityAnalytics />
         <LocaleProvider>
           {children}
         </LocaleProvider>

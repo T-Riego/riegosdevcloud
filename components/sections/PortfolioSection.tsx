@@ -9,7 +9,7 @@ export function PortfolioSection() {
 
   return (
     <div className="flex flex-col">
-      <section id="processo" className="box-border w-full max-w-full overflow-x-clip py-20 bg-surface-container-low">
+      <section id="processo" data-section-id="processo" className="box-border w-full max-w-full overflow-x-clip py-20 bg-surface-container-low">
         <div className="box-border max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="font-h2 text-h2 text-on-background">{content.process.headline}</h2>
@@ -26,7 +26,7 @@ export function PortfolioSection() {
         </div>
       </section>
 
-      <section id="portfolio" className="box-border w-full max-w-full overflow-x-clip py-20">
+      <section id="portfolio" data-section-id="portfolio" className="box-border w-full max-w-full overflow-x-clip py-20">
         <div className="box-border max-w-7xl mx-auto px-6">
           <div className="mb-12">
             <span className="text-primary font-bold uppercase tracking-widest text-xs">{content.portfolio.sectionTitle}</span>

@@ -1,13 +1,15 @@
 'use client'
 
 import { useLocale } from '@/context/LocaleContext'
+import { trackEvent } from '@/lib/analytics'
+import { TrackedWhatsAppLink } from '@/components/analytics/TrackedWhatsAppLink'
 
 export function HeroSection() {
   const { content } = useLocale()
   const diagnosticWhatsAppHref = `https://wa.me/${content.contact.whatsappNumber.replace(/\D/g, '')}?text=${encodeURIComponent(content.contact.whatsappMessage)}`
 
   return (
-    <section className="box-border w-full max-w-full overflow-x-hidden px-5 pt-28 pb-20 sm:px-6 md:pt-48 md:pb-32">
+    <section data-section-id="hero" className="box-border w-full max-w-full overflow-x-hidden px-5 pt-28 pb-20 sm:px-6 md:pt-48 md:pb-32">
       <div className="box-border max-w-7xl w-full max-w-full mx-auto grid min-w-0 grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="min-w-0 w-full max-w-full space-y-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container rounded-full text-on-secondary-container">
@@ -21,17 +23,20 @@ export function HeroSection() {
             {content.hero.subheadline}
           </p>
           <div className="flex w-full sm:w-auto flex-col sm:flex-row gap-4 pt-4">
-            <a 
+            <TrackedWhatsAppLink
               href={diagnosticWhatsAppHref}
               target="_blank"
               rel="noopener noreferrer"
+              ctaId="hero_whatsapp"
+              ctaLocation="hero"
               className="w-full sm:w-auto min-w-0 max-w-full box-border px-5 sm:px-8 py-4 accent-gradient text-white rounded-xl font-bold flex items-center justify-center gap-2 text-center text-sm sm:text-base leading-tight whitespace-normal active:scale-95 transition-transform"
             >
               <span className="min-w-0">{content.hero.ctaPrimary}</span>
               <span className="material-symbols-outlined shrink-0">arrow_forward</span>
-            </a>
+            </TrackedWhatsAppLink>
             <a 
               href="#portfolio"
+              onClick={() => trackEvent('cta_clicked', { cta_id: 'hero_portfolio', cta_location: 'hero', destination_type: 'anchor' })}
               className="w-full sm:w-auto min-w-0 max-w-full box-border px-5 sm:px-8 py-4 bg-white border border-outline-variant text-on-background rounded-xl font-semibold hover:bg-surface-container-low transition-colors active:scale-95 flex items-center justify-center text-center text-sm sm:text-base leading-tight whitespace-normal"
             >
               {content.hero.ctaSecondary}
