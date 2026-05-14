@@ -56,6 +56,8 @@ Para o Clarity aparecer em producao, `NEXT_PUBLIC_CLARITY_PROJECT_ID=wqzbfoy9h9`
 
 Atualizacao posterior: o usuario criou a GitHub Secret `NEXT_PUBLIC_CLARITY_PROJECT_ID`, e o workflow `.github/workflows/deploy.yml` foi ajustado para criar `.env.local` em `/opt/riegosdev-site` antes de rodar `docker build`. O Portainer continua gerenciando/mostrando a stack `site-oficial`, mas nao e necessario editar a variavel pela UI do Portainer neste fluxo.
 
+Deploy validado: GitHub Actions run `25862193507` concluiu com sucesso em 2026-05-14. `https://riegosdev.cloud/` respondeu `200`, `/sitemap.xml` respondeu com URLs corretas, e o chunk publico `/_next/static/chunks/0j5vsiatubt.5.js` contem `clarity.ms/tag` e `wqzbfoy9h9`. Proximo passo manual: abrir o painel do Microsoft Clarity e confirmar chegada de sessoes/eventos.
+
 ### Regra de memoria daqui pra frente
 
 Ao final de cada melhoria, atualizar:

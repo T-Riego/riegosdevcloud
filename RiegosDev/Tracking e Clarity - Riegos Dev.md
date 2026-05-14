@@ -16,6 +16,7 @@ Esta nota deve ser atualizada ao final de cada melhoria de SEO, analytics, track
 - Ambiente local: `.env.local` criado com `NEXT_PUBLIC_CLARITY_PROJECT_ID=wqzbfoy9h9`.
 - Ambiente de producao/VPS: GitHub Actions deve criar `.env.local` em `/opt/riegosdev-site` com o valor vindo da secret `NEXT_PUBLIC_CLARITY_PROJECT_ID` antes do `docker build`.
 - Portainer: a stack `site-oficial` recebe a imagem atualizada via `docker service update`; nao basta configurar essa variavel apenas no runtime do Portainer, porque o Next.js precisa dela no build.
+- Deploy validado em 2026-05-14: GitHub Actions `25862193507` concluiu com sucesso e o chunk publico `/_next/static/chunks/0j5vsiatubt.5.js` contem `clarity.ms/tag` e `wqzbfoy9h9`.
 - O componente e env-gated: se a variavel nao existir, ele retorna `null` e nao quebra o site.
 
 ## Arquivos Principais
@@ -116,7 +117,7 @@ Ao final de cada melhoria relevante, atualizar:
 
 - [x] GitHub Secret `NEXT_PUBLIC_CLARITY_PROJECT_ID` criada pelo usuario.
 - [x] Workflow ajustado para escrever `.env.local` na VPS antes do `docker build`.
-- [ ] Confirmar em producao que o HTML contem `clarity.ms/tag/wqzbfoy9h9`.
+- [x] Confirmar em producao que o bundle publico contem `clarity.ms/tag/wqzbfoy9h9`.
 - [ ] Validar no painel do Microsoft Clarity se aparecem visitas, cliques mortos, rage clicks, scroll map e gravacoes.
 - [ ] Definir se vamos adicionar consent banner LGPD antes de aumentar coleta/replay.
 - [ ] Instrumentar `nav_clicked`, `cta_clicked` generico e `outbound_link_clicked` quando fizer sentido.

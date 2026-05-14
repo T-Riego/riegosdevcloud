@@ -31,8 +31,8 @@ Atualizado em: 2026-05-14
 - [x] Rodar `npm run check:seo` e confirmar `15/15`.
 - [x] Criar GitHub Secret `NEXT_PUBLIC_CLARITY_PROJECT_ID` com valor `wqzbfoy9h9`.
 - [x] Ajustar GitHub Actions para criar `.env.local` na VPS antes do `docker build`.
-- [ ] Fazer deploy apos a variavel estar configurada em producao.
-- [ ] Validar `view-source:https://riegosdev.cloud/` procurando `clarity.ms/tag/wqzbfoy9h9`.
+- [x] Fazer deploy apos a variavel estar configurada em producao.
+- [x] Validar bundle publico procurando `clarity.ms/tag/wqzbfoy9h9`.
 - [ ] Validar visitas/eventos no painel do Microsoft Clarity.
 - [ ] Decidir se consent banner LGPD entra antes de expandir replay/heatmaps.
 
@@ -140,6 +140,7 @@ Atualizado em: 2026-05-14
 - **Documentacao:** criada nota [[Tracking e Clarity - Riegos Dev]] e atualizadas notas de retomada/mapa/proximos passos.
 - **Verificacao:** `npm run lint`, `npm run check:seo` e `npm run build` passaram em 2026-05-14.
 - **Pendente:** configurar a env var no build da VPS/GitHub Actions e validar o script em producao.
+- **Deploy validado:** GitHub Actions `25862193507` passou e o bundle publico contem `clarity.ms/tag` com `wqzbfoy9h9`.
 
 ## Modelo Codex Recomendado
 
