@@ -1,37 +1,29 @@
 import type { MetadataRoute } from 'next'
+import { contentLastModified, siteUrl } from '@/lib/seo'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://riegosdev.cloud'
-  const lastModified = new Date()
-
   return [
     {
-      url: baseUrl,
-      lastModified,
+      url: siteUrl,
+      lastModified: contentLastModified.home,
       changeFrequency: 'monthly',
       priority: 1,
-      alternates: {
-        languages: {
-          'pt-BR': baseUrl,
-          en: baseUrl,
-        },
-      },
     },
     {
-      url: `${baseUrl}/privacidade`,
-      lastModified,
+      url: `${siteUrl}/privacidade`,
+      lastModified: contentLastModified.legal,
       changeFrequency: 'yearly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/termos`,
-      lastModified,
+      url: `${siteUrl}/termos`,
+      lastModified: contentLastModified.legal,
       changeFrequency: 'yearly',
       priority: 0.6,
     },
     {
-      url: `${baseUrl}/exclusao-de-dados`,
-      lastModified,
+      url: `${siteUrl}/exclusao-de-dados`,
+      lastModified: contentLastModified.legal,
       changeFrequency: 'yearly',
       priority: 0.6,
     },
