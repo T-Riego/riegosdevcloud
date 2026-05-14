@@ -10,7 +10,20 @@ html,
 body {
   width: 100%;
   max-width: 100%;
-  overflow-x: clip;
+  overflow-x: hidden;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+button {
+  max-width: 100%;
 }
 
 @theme {
@@ -80,16 +93,16 @@ body {
 @utility font-label-sm { font-family: var(--font-inter); }
 
 @utility text-h1 {
-  font-size: 40px;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
+  font-size: 34px;
+  line-height: 1.12;
+  letter-spacing: 0;
   font-weight: 700;
 }
 
 @utility text-h2 {
-  font-size: 30px;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
+  font-size: 28px;
+  line-height: 1.18;
+  letter-spacing: 0;
   font-weight: 600;
 }
 
@@ -104,11 +117,13 @@ body {
   .text-h1 {
     font-size: 48px;
     line-height: 1.1;
+    letter-spacing: 0;
   }
 
   .text-h2 {
     font-size: 36px;
     line-height: 1.2;
+    letter-spacing: 0;
   }
 }
 
